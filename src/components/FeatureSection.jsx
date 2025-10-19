@@ -43,7 +43,7 @@ export default function FeatureSections() {
   ];
 
   return (
-    <section className="bg-[#e6e6dd] text-white bg-slate-950">
+    <section className=" text-white bg-[#0d0a0a]">
       {sections.map((section, index) => (
         <div
           key={index}
