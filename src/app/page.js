@@ -4,6 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { AboutSection }from "@/components/AboutSection";
 import FeatureSection from "@/components/FeatureSection";
 import { AppleCardsCarousel } from "@/components/AppleCardsCarousel";
+import { BackgroundBoxes } from "@/components/BackgroundBoxes";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,8 +13,10 @@ export default function Home() {
       <Navbar/>
       <HeroSection />
       <AboutSection/>
-      <FeatureSection/>
       <AppleCardsCarousel/>
+      <BackgroundBoxes />
+      <FeatureSection/>
+      <Footer/>
     </main>
   );
 }

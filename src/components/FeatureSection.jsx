@@ -1,41 +1,84 @@
-export default function FeatureSection() {
+"use client";
+
+import Image from "next/image";
+
+export default function FeatureSections() {
+  const sections = [
+    {
+      image:"/image1.jpeg",
+      title: "The Pulse of Dubai Nights",
+      description:
+        "At Noc Noc Dubai, every night is a story waiting to be told. Immerse yourself in an atmosphere where luxury meets energy — where neon lights, signature cocktails, and the city’s hottest DJs create an unforgettable vibe.",
+      // description2:
+      //   "From the bar to the dance floor, every corner of Noc Noc is built for connection, laughter, and pure nightlife magic.",
+      buttonText: "Discover More",
+    },
+    {
+      image:"/image2.jpeg",
+      title: "Crafted Flavors. Signature Serves.",
+      description:
+        "Our curated menu blends world-class mixology with exotic flavors. Every sip is designed to elevate your night.",
+      // description2:
+      //   "Choose from premium spirits, fine wines, and handcrafted cocktails that redefine indulgence.",
+      buttonText: "View Menu",
+    },
+    {
+      image:"/image3.jpeg",
+      title: "Where Energy Meets Elegance",
+      description:
+        "Whether it’s an intimate dinner or a high-energy night out, Noc Noc’s ambiance adapts to every mood.",
+      // description2:
+      //   "Let the rhythm of the night pull you in — because every moment here feels iconic.",
+      buttonText: "Book Your Table",
+    },
+    {
+      image:"/twoLadies.jpeg",
+      title: "Ladies Night Like No Other",
+      description:
+        "Celebrate with your squad at Noc Noc’s exclusive Ladies Night — where music, fashion, and fun collide.",
+      // description2:
+      //   "Sip on handcrafted cocktails and dance the night away under the golden glow of Dubai’s nightlife.",
+      buttonText: "Join the Party",
+    },
+  ];
+
   return (
-    <>
-    <section className="bg-[#151515] text-white py-20 px-6 md:px-16" id="feature">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        {/* Image side */}
-        <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1758747376759-454112cd108d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=900"
-            alt="Noc Noc Dubai Nightlife"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
-          />
-        </div>
+    <section className="bg-[#e6e6dd] text-white bg-slate-950">
+      {sections.map((section, index) => (
+        <div
+          key={index}
+          className={`flex flex-col py-15 md:flex-row ${
+            index % 2 !== 0 ? "md:flex-row-reverse" : ""
+          } w-full h-[500px]`}
+        >
+          {/* Image side */}
+          <div className="relative md:w-1/2 w-full h-1/2 md:h-full">
+            <Image
+              src={section.image}
+              alt={section.title}
+              fill
+              className="object-cover"
+              priority={index === 0}
+              quality={100}
+            />
+          </div>
 
-        {/* Text side */}
-        <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#f4c542]">
-            The Pulse of Dubai Nights
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            At <span className="text-white font-semibold">Noc Noc Dubai</span>, 
-            every night is a story waiting to be told. Immerse yourself in an 
-            atmosphere where luxury meets energy — where neon lights, signature 
-            cocktails, and the city’s hottest DJs create an unforgettable vibe.
-          </p>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            From the bar to the dance floor, every corner of Noc Noc is built 
-            for connection, laughter, and pure nightlife magic.
-          </p>
-          <button className="mt-4 px-10 py-3 rounded-full bg-[#f4c542] text-black font-semibold uppercase tracking-wide hover:bg-[#e5b932] transition-all duration-300">
-            Discover More
-          </button>
+          {/* Text side */}
+          <div className="flex md:w-1/2 w-full h-1/2 md:h-full items-center justify-center px-8 md:px-16">
+            <div className="max-w-lg text-center md:text-left">
+              <h2 className="text-5xl md:text-6xl font-bold text-[#C29C7D] mb-6 leading-tight">
+                {section.title}
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                {section.description}
+              </p>
+              <button className="px-10 py-3 rounded-full bg-[#f2ca99] text-black font-semibold uppercase tracking-wide hover:bg-[#e5b932] transition-all duration-300">
+                {section.buttonText}
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </section>
-
-    </>
-
-    
   );
 }
