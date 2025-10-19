@@ -5,6 +5,7 @@ import { AboutSection }from "@/components/AboutSection";
 import FeatureSection from "@/components/FeatureSection";
 import { AppleCardsCarousel } from "@/components/AppleCardsCarousel";
 import { BackgroundBoxes } from "@/components/BackgroundBoxes";
+import MambaFeatures from "@/components/MambaFeatures";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <AppleCardsCarousel/>
       <BackgroundBoxes />
       <FeatureSection/>
+      {/* <MambaFeatures/> */}
       <Footer/>
     </main>
   );
