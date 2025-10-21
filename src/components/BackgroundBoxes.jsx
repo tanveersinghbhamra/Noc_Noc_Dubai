@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 export function BackgroundBoxes() {
   return (
     <div
-      className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      className="h-2/3 relative  pt-40 pb-30 w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
       <div
-        className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+        className="absolute inset-0 w-full h-full bg-gradient-to-b from-slate-900 to-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       <Boxes />
       <h1 className={cn("md:text-5xl text-xl text-[#C29C7D] relative z-20 pb-4 ")}>
         NOC NOC is Awesome
