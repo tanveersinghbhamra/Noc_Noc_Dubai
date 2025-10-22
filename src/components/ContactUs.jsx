@@ -27,7 +27,7 @@ export default function ContactUsSection() {
         <section className="py-20  bg-gray-900" id='ContactSection'>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x text-white">
                 <div className="py-6 md:py-0 md:px-6">
-                    <h1 className="text-4xl font-bold">Get in touch</h1>
+                    <h1 className="font-alice text-4xl font-bold">Get in touch</h1>
                     <p className="pt-2 pb-4 font-medium text-lg">Subscribe by filling the form for future updates right at your inbox</p>
                     <div className="space-y-4">
                         <p className="flex items-center">
@@ -120,7 +120,7 @@ export default function ContactUsSection() {
                         </div>
                     </div>
 
-                    <button type='button' className="w-full self-center px-8 py-3 text-lg font-bold text-center text-black rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#C29C7D] focus:ring-[#C29C7D] hover:ring-[#C29C7D] button hover:cursor-pointer">Subscribe For Updates</button>
+                    <button type='button' className="font-cinzel w-full self-center px-8 py-3 text-lg font-bold text-center text-black rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#C29C7D] focus:ring-[#C29C7D] hover:ring-[#C29C7D] button hover:cursor-pointer">Subscribe For Updates</button>
                 </form>
             </div>
         </section>

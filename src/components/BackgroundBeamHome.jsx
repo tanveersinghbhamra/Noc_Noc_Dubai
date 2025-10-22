@@ -6,9 +6,10 @@ export default function BackgroundBeamHome() {
     <BackgroundBeamsWithCollision>
       <h2
         className="
+          font-alice
           relative z-20 
           text-center font-sans font-bold tracking-tight 
-          text-black dark:text-white
+          text-white
           text-3xl sm:text-5xl md:text-6xl lg:text-6xl
           leading-tight sm:leading-snug md:leading-none
           px-4 sm:px-6 md:px-10

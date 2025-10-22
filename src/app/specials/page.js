@@ -1,18 +1,15 @@
-import Footer from '@/components/Footer'
-import VideoHero from '@/components/VideoHero'
-import { Navbar } from '@/components/Navbar'
 import React from 'react'
 import VortexSection from '@/components/Vortex'
 import MambaFeatureSection from '@/components/MambaFeatureSection'
-import ContactUsSection from '@/components/ContactUs'
+import ImageHero from '@/components/ImageHero'
 
 export default function Specials() {
   return (
     <div className='bg-black'>
-        <VideoHero
-            title=""
-            // subtitle="Step into a world where light, sound, and flavor blend seamlessly. At Noc Noc, every corner tells a story of sophistication, creating moments that linger long after the night ends."
-            videoUrl="/nocnocVideos/video1.mp4"
+        <ImageHero
+            title="Noc Noc Specials"
+            subtitle="Specials that knock your taste buds"
+            imageUrl="https://images.unsplash.com/photo-1588991244776-777454edf937?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
         />
         <VortexSection/>
         <MambaFeatureSection/>

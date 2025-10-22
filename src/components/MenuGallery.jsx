@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function MenuGallery() {
@@ -26,7 +27,7 @@ export default function MenuGallery() {
     return (
         <div className="w-full py-16 text-white bg-black">
         {/* SECTION TITLE */}
-        <h2 className="mb-10 text-4xl font-semibold tracking-wide text-center text-[#C29C7D]">
+        <h2 className="font-cinzel mb-10 text-4xl font-semibold tracking-wide text-center text-[#C29C7D]">
             FOOD & BAR MENU
         </h2>
 
@@ -73,7 +74,7 @@ export default function MenuGallery() {
                     <img
                         src={img}
                         alt={`Menu item ${i + 1}`}
-                        className="object-cover w-full shadow-lg h-80 rounded-2xl"
+                        className="object-cover w-full shadow-lg h-80"
                     />
                     </div>
                 ))}
@@ -105,23 +106,23 @@ export default function MenuGallery() {
             </div>
             {/* TWO BUTTONS BELOW */}
             <div className="flex justify-center gap-6 mt-12">
-                <a
+                <Link
                 href="/Food Menu - Noc Noc.pdf" // replace with actual food PDF
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 text-lg font-medium text-black transition bg-white rounded-full hover:bg-gray-300"
+                className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointe"
                 >
                 View Food Menu
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href="/Bar Menu - Noc Noc.pdf" // replace with actual bar PDF
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 text-lg font-medium text-black transition bg-white rounded-full hover:bg-gray-300"
+                className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer"
                 >
                 View Bar Menu
-                </a>
+                </Link>
             </div>
         </div>
     );

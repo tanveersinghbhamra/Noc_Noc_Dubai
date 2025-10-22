@@ -55,7 +55,7 @@ export default function MambaFeatures({
             {/* {subtitle && (
               <span className="text-xs uppercase opacity-80">{subtitle}</span>
             )} */}
-            <h3 className="text-5xl font-bold mt-2 mb-4 text-[#C29C7D] ">{title}</h3>
+            <h3 className="font-alice text-5xl font-bold mt-2 mb-4 text-[#C29C7D] ">{title}</h3>
             <p className="text-black leading-relaxed text-lg mb-6 font-bold">
                 {description}
             </p>
@@ -70,7 +70,7 @@ export default function MambaFeatures({
 
           <div className="highlights text-lg text-black">
                 <div className="flex items-center gap-4 mb-2">
-                    <p className="text-[#C29C7D] text-2xl font-bold">{highlightsHeading}</p>
+                    <p className="font-alice text-[#C29C7D] text-2xl font-bold">{highlightsHeading}</p>
                 </div>
                 <div className="flex items-center gap-4 font-bold ">
                     <p>{highlightsPoints1}</p>

@@ -145,3 +145,43 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px white inset !important;
 }
 
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-lustria: 'Lustria', serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-fauna: 'Fauna One', serif;
+   --font-alice: 'Alice', serif;
+}
+
+/* Utility classes for each font */
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-lustria {
+  font-family: var(--font-lustria);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
+}
+
+.font-fauna {
+  font-family: var(--font-fauna);
+}
+
+.font-alice {
+  font-family: var(--font-alice);
+}
+
+
+
+/* Default body font */
+body {
+  font-family: var(--font-lato);
+}

@@ -5,7 +5,7 @@ import { Vortex } from "./ui/vortex";
 
 export default function VortexSection() {
   return (
-    <div className="w-screen my-20 mx-auto h-auto min-h-[26rem] md:min-h-[30rem] overflow-hidden bg-black text-center">
+    <div className="font-alice w-screen my-20 mx-auto h-auto min-h-[26rem] md:min-h-[30rem] overflow-hidden bg-black text-center">
       <Vortex
         backgroundColor="black"
         className="flex flex-col items-center justify-center px-6 sm:px-10 md:px-20 py-10 md:py-16 w-full h-full"

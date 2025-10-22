@@ -28,7 +28,7 @@ export default function FeatureSections() {
       description:
         "Whether it’s an intimate dinner or a high-energy night out, Noc Noc’s ambiance adapts to every mood.",
       buttonText: "Book Your Table",
-      link: "/reserve"
+      link: "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
     },
     {
       image: "/nocnocImages/twoLadies.jpeg",
@@ -36,7 +36,7 @@ export default function FeatureSections() {
       description:
         "Celebrate with your squad at Noc Noc’s exclusive Ladies Night — where music, fashion, and fun collide.",
       buttonText: "Join the Party",
-      link: "/reserve"
+      link: "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
     },
   ];
 
@@ -64,13 +64,13 @@ export default function FeatureSections() {
           {/* Text side */}
           <div className="flex md:w-1/2 w-full items-center justify-center px-6 sm:px-10 md:px-16 py-10 md:py-0 bg-black">
             <div className="max-w-xl text-center md:text-left">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-snug">
+              <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-snug">
                 {section.title}
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+              <p className=" text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
                 {section.description}
               </p>
-              <Link href={section.link} className="px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer">
+              <Link href={section.link} className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer">
                 {section.buttonText}
               </Link>
             </div>

@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 
-export default function VideoHero({ title, subtitle, videoUrl }) {
+export default function ImageHero({ title, subtitle, imageUrl }) {
   // Animation variants
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
 
-  const videoVariants = {
+  const imageVariants = {
     hidden: { opacity: 0, scale: 1.05 },
     visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 1 } },
   };
@@ -17,19 +17,17 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
   return (
     <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-[50vh] md:min-h-[80vh]">
       
-      {/* Video Background with delayed fade-in */}
-      <motion.video
+      {/* Image Background with delayed fade-in */}
+      <motion.img
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src={videoUrl}
-        autoPlay
-        loop
-        muted
+        src={imageUrl}
+        alt="ImageHeroBackground"
         initial="hidden"
         animate="visible"
-        variants={videoVariants}
+        variants={imageVariants}
       />
 
-      {/* Overlay to darken video */}
+      {/* Overlay to darken image */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
 
       {/* Text content with fade-up animation */}

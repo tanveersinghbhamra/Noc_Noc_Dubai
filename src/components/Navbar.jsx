@@ -37,23 +37,24 @@ export function Navbar() {
       name: "Contact",
       link: "#ContactSection",
     },
-    {
-      name: "Reserve",
-      link: "/reserve"
-    }
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="font-cinzel relative w-full">
       <ResizableNavbar>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4 pr-2">
-            <NavbarButton variant="custom">Connect on Whatsapp</NavbarButton>
+            <NavbarButton variant="custom" onClick={() =>
+              window.open(
+                "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot",
+                "_blank"
+              )
+            }>Reserve</NavbarButton>
           </div>
         </NavBody>
 
@@ -79,10 +80,14 @@ export function Navbar() {
             <div className="flex w-full flex-col gap-4">
               
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
-                className="w-full">
-                Connect On Whatsapp
+                className="w-full"
+                onClick={() =>
+                  window.open("https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot","_blank"
+                  )
+                }
+              >
+                Reserve
               </NavbarButton>
             </div>
           </MobileNavMenu>
