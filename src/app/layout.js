@@ -57,7 +57,7 @@ export const metadata = {
   //   // other: [
   //   //   { rel: "android-chrome", url: "/android-chrome-192x192.png" },
   //   //   { rel: "android-chrome", url: "/android-chrome-512x512.png" },
-  //   // ],
+  //   // ],http://localhost:3000/_next/image?url=%2FnocnocImages%2FdubaiPulse.jpeg&w=3840&q=100
   // },
 };
 
