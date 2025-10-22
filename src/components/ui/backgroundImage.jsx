@@ -36,7 +36,7 @@ export default function BackgroundImage({
         {buttonText && (
           <button
             onClick={onButtonClick}
-            className="px-10 py-3  bg-[#f2ca99] bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:cursor-pointer hover:bg-[#C29C7D] hover:text-black  transition-all duration-300"
+            className="px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:cursor-pointer hover:bg-[#C29C7D] hover:text-black  transition-all duration-300"
           >
             {buttonText}
           </button>

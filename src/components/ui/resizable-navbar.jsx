@@ -1,4 +1,5 @@
 "use client";;
+import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
@@ -7,6 +8,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -85,7 +87,33 @@ export const NavItems = ({
   className,
   onItemClick
 }) => {
-  const [hovered, setHovered] = useState(null);
+    const pathname = usePathname();
+    const [hovered, setHovered] = useState(null);
+    // track active link in state so server and client render match
+    const [activeLink, setActiveLink] = useState(pathname);
+
+    React.useEffect(() => {
+      // only run in the browser
+      if (typeof window === "undefined") return;
+
+      const updateActive = () => {
+        // prefer hash when present, otherwise pathname
+        setActiveLink(window.location.hash || window.location.pathname || pathname);
+      };
+
+      // set initial value on mount
+      updateActive();
+      // listen for hash changes so underline updates without full navigation
+      window.addEventListener("hashchange", updateActive);
+      // also listen for popstate in case SPA navigation changes path
+      window.addEventListener("popstate", updateActive);
+
+      return () => {
+        window.removeEventListener("hashchange", updateActive);
+        window.removeEventListener("popstate", updateActive);
+      };
+    }, [pathname]);
+
 
   return (
     <motion.div
@@ -95,8 +123,10 @@ export const NavItems = ({
     className
   )}
 >
-  {items.map((item, idx) => (
-    <a
+  {items.map((item, idx) => {
+    const isActive = activeLink === item.link || pathname === item.link;
+     return (
+    <Link
       onMouseEnter={() => setHovered(idx)}
       onClick={onItemClick}
       key={`link-${idx}`}
@@ -106,9 +136,15 @@ export const NavItems = ({
       <span className="relative z-20">{item.name}</span>
 
       {/* gold underline */}
-      <span className="absolute left-0 bottom-0 h-[3px] w-0 bg-[#C29C7D] transition-all duration-300 ease-out group-hover:w-full"></span>
-    </a>
-  ))}
+      <span
+        className={cn(
+          "absolute left-0 bottom-0 h-[3px] bg-[#C29C7D] transition-all duration-300 ease-out",
+          isActive ? "w-full" : "w-0 group-hover:w-full"
+        )}
+      ></span>
+    </Link>
+     )
+  })}
 </motion.div>
 
 
@@ -200,7 +236,7 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
@@ -209,7 +245,7 @@ export const NavbarLogo = () => {
         width={30}
         height={30} />
       <span className="font-medium text-white text-2xl">NOC NOC</span>
-    </a>
+    </Link>
   );
 };
 

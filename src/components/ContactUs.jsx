@@ -2,6 +2,7 @@
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import React ,{ useState } from 'react';
+import Link from 'next/link';
 
 export default function ContactUsSection() {
     const [interests, setInterests] = useState([]);
@@ -23,7 +24,7 @@ export default function ContactUsSection() {
         alert("Form submitted! Check console for values.");
     }
     return(
-        <section className="py-20  bg-gray-900">
+        <section className="py-20  bg-gray-900" id='ContactSection'>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x text-white">
                 <div className="py-6 md:py-0 md:px-6">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -31,7 +32,7 @@ export default function ContactUsSection() {
                     <div className="space-y-4">
                         <p className="flex items-center">
                             <svg className="text-white w-5 h-5 mr-2 sm:mr-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path  d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"/>
+                                    <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"/>
                             </svg>
 
                             <span>Timings 11:00 am - 1:30 am</span>
@@ -55,6 +56,23 @@ export default function ContactUsSection() {
                             </svg>
                             <span>marketing.nocnoc@gmail.com</span>
                         </p>
+                        <p className="flex items-center">
+                            <Link href="https://www.instagram.com/nocnocdubai/">
+                                <svg className="text-white w-5 h-5 mr-2 sm:mr-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/>
+                                </svg>
+                            </Link>
+                            <span> Follow NOC NOC for more on Instagram - nocnocdubai</span>
+                        </p>
+                    </div>
+                    <div className="mt-6 w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.001389858079!2d55.118149900000006!3d25.034026900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1391e42a4db1%3A0x416b5f5147db2087!2sNoc%20Noc!5e0!3m2!1sen!2sin!4v1761067922409!5m2!1sen!2sin"
+                            className="w-full h-full border-0"
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </div>
                 <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
@@ -102,7 +120,7 @@ export default function ContactUsSection() {
                         </div>
                     </div>
 
-                    <button type="button" className="w-full self-center px-8 py-3 text-lg font-bold text-black rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#C29C7D] focus:ring-[#C29C7D] hover:ring-[#C29C7D]">Subscribe For Updates</button>
+                    <button type='button' className="w-full self-center px-8 py-3 text-lg font-bold text-center text-black rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#C29C7D] focus:ring-[#C29C7D] hover:ring-[#C29C7D] button hover:cursor-pointer">Subscribe For Updates</button>
                 </form>
             </div>
         </section>

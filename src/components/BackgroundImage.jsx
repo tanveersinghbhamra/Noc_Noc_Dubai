@@ -2,7 +2,7 @@
 
 import BackgroundImage from "@/components/ui/backgroundImage";
 
-export default function Page() {
+export default function BackgroundImageReserve() {
   return (
     <div>
       <BackgroundImage

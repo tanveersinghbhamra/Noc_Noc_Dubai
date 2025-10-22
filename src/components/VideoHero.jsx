@@ -19,7 +19,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
       {/* Text content */}
       <div className="relative z-10 text-[#C29C7D] px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
-        <p className="mt-2 sm:mt-3 text-md sm:text-lg md:text-xl font-semibold max-w-2xl text-white">{subtitle}</p>
+        <p className="text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">{subtitle}</p>
       </div>
     </section>
   );

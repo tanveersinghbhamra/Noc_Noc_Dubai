@@ -12,25 +12,8 @@ export default function MambaFeatureSection() {
         description2="Enjoy personalized service, prime table seating, and an ambiance designed for the city’s elite. From world class champagnes to top shelf spirits, every pour is a statement of luxury.
                       Let our hosts curate your perfect night because at Noc Noc"
         buttonText="Action"
-        bgColor="bg-gradient-to-b from-black to-slate-950"
+        bgColor="bg-black"
         textColor="text-black"
-      />
-
-      <MambaFeatures
-        videoUrl="/nocnocVideos/shisha.mp4"
-        title="Shisha Lounge"
-        subtitle="Sit back, exhale, and let the night take over."
-        description="At Noc Noc, shisha isn’t just an add-on it’s a full experience.Settle into our sleek lounge area, surrounded by ambient lighting, rhythmic beats, and the city’s most relaxed crowd. Whether you’re catching up with friends or unwinding after a long day, our premium shisha selection sets the perfect mood."
-        description2="  Choose from an exclusive variety of flavors, ranging from timeless classics to exotic fusions each crafted using the finest tobacco and served with precision by our expert shisha masters."
-        description3="Sit back, exhale, and let the night take over."
-        highlightsHeading="Signature Experience"
-        highlightsPoints1= "Premium tobacco blends & fruit-head options"
-        highlightsPoints2= "Smooth, long-lasting sessions with top-grade equipment"
-        highlightsPoints3= "Personalized service & comfortable seating and many more"
-        buttonText="Book Now"
-        bgColor="bg-gradient-to-b from-slate-950 to-slate-950"
-        textColor="text-black"
-        reverse
       />
 
       <MambaFeatures
@@ -45,10 +28,26 @@ export default function MambaFeatureSection() {
         highlightsPoints4="Fully customizable space and theme"
         highlightsPoints5="Product Launches & Brand Showcases"
         buttonText="Learn More"
-        bgColor="bg-gradient-to-b from-slate-950 to-black"
+        bgColor="bg-black"
         textColor="text-black"
+        reverse
       />
 
+      <MambaFeatures
+        videoUrl="/nocnocVideos/shishaVideo.mp4"
+        title="Shisha Lounge"
+        subtitle="Sit back, exhale, and let the night take over."
+        description="At Noc Noc, shisha isn’t just an add-on it’s a full experience.Settle into our sleek lounge area, surrounded by ambient lighting, rhythmic beats, and the city’s most relaxed crowd. Whether you’re catching up with friends or unwinding after a long day, our premium shisha selection sets the perfect mood."
+        description2="  Choose from an exclusive variety of flavors, ranging from timeless classics to exotic fusions each crafted using the finest tobacco and served with precision by our expert shisha masters."
+        description3="Sit back, exhale, and let the night take over."
+        highlightsHeading="Signature Experience"
+        highlightsPoints1= "Premium tobacco blends & fruit-head options"
+        highlightsPoints2= "Smooth, long-lasting sessions with top-grade equipment"
+        highlightsPoints3= "Personalized service & comfortable seating and many more"
+        buttonText="Book Now"
+        bgColor="bg-black"
+        textColor="text-black"
+      />
 
       <MambaFeatures
         videoUrl="/nocnocVideos/video1.mp4"
@@ -63,8 +62,9 @@ export default function MambaFeatureSection() {
         highlightsPoints4="Professional event planning assistance"
         highlightsPoints5="Corporate clients enjoy up to 30% off on all food and drinks."
         buttonText="Learn More"
-        bgColor="bg-gradient-to-b from-slate-950 to-slate-950"
+        bgColor="bg-black"
         textColor="text-black"
+        reverse
       />
 
       <MambaFeatures
@@ -79,9 +79,8 @@ export default function MambaFeatureSection() {
         highlightsPoints3="Dedicated service team for your event"
         highlightsPoints4="Personalized food & beverage selections"
         buttonText="Book Now"
-        bgColor="bg-gradient-to-b from-slate-950 to-slate-950"
+        bgColor="bg-black"
         textColor="text-black"
-        reverse
       />
 
     </>
