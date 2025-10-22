@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation"
 import {
   Navbar as ResizableNavbar,
   NavBody,
@@ -10,30 +11,36 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import Link from "next/link";
 import { useState } from "react";
 
 export function Navbar() {
+  
   const navItems = [
     {
-      name: "About",
-      link: "#about",
+      name: "Home",
+      link: "/"
+    },
+    {
+      name: "Specials",
+      link: "/specials",
     },
     {
       name: "Menu",
-      link: "#menu",
+      link: "/menu",
     },
     {
-      name: "Events",
-      link: "#events",
-    },
-    {
-      name: "Restaurant",
-      link: "#restaurant",
+      name: "Gallery",
+      link: "/gallery",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "#ContactSection",
     },
+    {
+      name: "Reserve",
+      link: "/reserve"
+    }
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,7 +52,7 @@ export function Navbar() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 pr-2">
             <NavbarButton variant="custom">Connect on Whatsapp</NavbarButton>
           </div>
         </NavBody>
@@ -59,15 +66,15 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
           </MobileNavHeader>
 
-          <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
+          <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false) }>
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300">
+                className="relative text-white hover:text-[#C29C7D]">
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               

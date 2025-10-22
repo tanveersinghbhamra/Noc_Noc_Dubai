@@ -2,26 +2,33 @@ import Image from "next/image";
 import { HeroSection } from "@/components/HeroSection";
 import VideoHero from "@/components/VideoHero";
 import { Navbar } from "@/components/Navbar";
-import { AboutSection }from "@/components/AboutSection";
+import BackgroundBeamHome from "@/components/BackgroundBeamHome";
 import FeatureSection from "@/components/FeatureSection";
-import { AppleCardsCarousel } from "@/components/AppleCardsCarousel";
+import HomeCarousel from "@/components/HomeCarousel";
 import { BackgroundBoxes } from "@/components/BackgroundBoxes";
 import Footer from "@/components/Footer";
+import ContactUsSection from "@/components/ContactUs";
+import BackgroundImageReserve from "@/components/BackgroundImage";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
-      <Navbar/>
       <VideoHero
-          title="About Our Company"
-          subtitle="We create innovative solutions for your business."
-          videoUrl="/get.mp4"
+          title="Welcome to NOC NOC"
+          subtitle="Dubai's Ultimate Nightlife Destination"
+          videoUrl="/nocnocVideos/get.mp4"
       />
-      <AboutSection/>
-      <AppleCardsCarousel/>
+      <BackgroundBeamHome/>
+      <HomeCarousel/>
       <BackgroundBoxes />
       <FeatureSection/>
-      <Footer/>
+      <VideoHero
+          title=""
+          subtitle=""
+          videoUrl="/nocnocVideos/champagne.mp4"
+      />
+     
+      <BackgroundImageReserve/>
     </main>
   );
 }
