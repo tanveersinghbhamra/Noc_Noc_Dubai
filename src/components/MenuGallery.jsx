@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -16,12 +17,12 @@ export default function MenuGallery() {
 
     // Replace with your actual food & drink image paths
     const menuImages = [
-        "/CheeseNachos.jpeg",
-        "/DineWine.jpeg",
-        "/Drinks.jpeg",
-        "/GrilledSalmon.jpeg",
-        "/DecadentDesserts.jpeg",
-        "/Burgers&Fries.jpeg",
+        "/nocnocImages/CheeseNachos.jpeg",
+        "/nocnocImages/DineWine.jpeg",
+        "/nocnocImages/Drinks.jpeg",
+        "/nocnocImages/GrilledSalmon.jpeg",
+        "/nocnocImages/DecadentDesserts.jpeg",
+        "/nocnocImages/Burgers&Fries.jpeg",
     ];
 
     return (
@@ -75,6 +76,7 @@ export default function MenuGallery() {
                         src={img}
                         alt={`Menu item ${i + 1}`}
                         className="object-cover w-full shadow-lg h-80"
+                        loading="lazy"
                     />
                     </div>
                 ))}
@@ -107,16 +109,16 @@ export default function MenuGallery() {
             {/* TWO BUTTONS BELOW */}
             <div className="flex justify-center gap-6 mt-12">
                 <Link
-                href="/Food Menu - Noc Noc.pdf" // replace with actual food PDF
+                href="/nocnocPdfs/foodMenu.pdf" // replace with actual food PDF
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointe"
+                className="font-cinzel px-4 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointe"
                 >
                 View Food Menu
                 </Link>
 
                 <Link
-                href="/Bar Menu - Noc Noc.pdf" // replace with actual bar PDF
+                href="/nocnocPdfs/barMenu.pdf" // replace with actual bar PDF
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer"

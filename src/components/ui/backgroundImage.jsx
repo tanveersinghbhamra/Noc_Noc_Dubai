@@ -6,7 +6,6 @@ export default function BackgroundImage({
   heading,
   subheading,
   buttonText,
-  onButtonClick,
 }) {
   return (
     <section className="relative w-full h-96">

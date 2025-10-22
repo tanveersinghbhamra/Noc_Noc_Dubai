@@ -42,9 +42,10 @@ export default function MambaFeatures({
               />
             ) : (
               image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
+                  fill
                   className="w-full h-full object-cover"
                 />
               )
@@ -52,9 +53,6 @@ export default function MambaFeatures({
           </div>
 
           <div className={`flex flex-col justify-center flex-1 py-25 px-12 bg-white ${textColor}`}>
-            {/* {subtitle && (
-              <span className="text-xs uppercase opacity-80">{subtitle}</span>
-            )} */}
             <h3 className="font-alice text-5xl font-bold mt-2 mb-4 text-[#C29C7D] ">{title}</h3>
             <p className="text-black leading-relaxed text-lg mb-6 font-bold">
                 {description}
@@ -88,14 +86,6 @@ export default function MambaFeatures({
                     <p>{highlightsPoints5}</p>
                 </div>
             </div>
-            {/* {buttonText && (
-              <button
-                type="button"
-                className="self-start bg-[#f2ca99] hover:bg-[#e6b879] text-black font-semibold px-6 py-2 rounded-full transition"
-              >
-                {buttonText}
-              </button>
-            )} */}
           </div>
         </div>
       </div>

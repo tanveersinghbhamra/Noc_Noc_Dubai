@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 
 
 export const Navbar = ({
@@ -239,11 +240,12 @@ export const NavbarLogo = () => {
     <Link
       href="/"
       className="relative z-20 ml-3 flex items-center  font-normal text-black">
-      <img
+      <Image
         src="/nocnocImages/nocnocLogo.svg"
-        alt="logo"
+        alt="nocnocLogo"
         width={65}
         height={46} />
+        
       <span className="font-medium text-[#C29C7D] pt-1.5 text-2xl">NOC NOC</span>
     </Link>
   );

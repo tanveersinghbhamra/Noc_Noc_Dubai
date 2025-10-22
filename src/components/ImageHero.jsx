@@ -25,6 +25,7 @@ export default function ImageHero({ title, subtitle, imageUrl }) {
         initial="hidden"
         animate="visible"
         variants={imageVariants}
+        loading="lazy"
       />
 
       {/* Overlay to darken image */}
