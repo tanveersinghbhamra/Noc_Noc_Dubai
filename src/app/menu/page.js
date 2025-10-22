@@ -1,4 +1,3 @@
-import VideoHero from "@/components/VideoHero";
 import MenuAbout from "@/components/MenuAbout";
 import MenuStickyImage from "@/components/MenuStickyImage";
 import MenuGallery from "@/components/MenuGallery";

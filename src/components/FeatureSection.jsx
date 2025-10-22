@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FeatureSections() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const sections = [
     {
       image: "/nocnocImages/dubaiPulse.jpeg",
@@ -56,8 +55,7 @@ export default function FeatureSections() {
               alt={section.title}
               fill
               className="object-cover"
-              priority={index === 0}
-              quality={100}
+              loading="lazy"
             />
           </div>
 

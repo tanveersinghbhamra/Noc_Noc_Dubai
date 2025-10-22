@@ -4,8 +4,7 @@ export default function MambaFeatureSection() {
   return (
     <>
       <MambaFeatures
-        videoUrl="/nocnocVideos/champagne.mp4"
-        
+        videoUrl="https://res.cloudinary.com/dson4wzib/video/upload/v1761149137/champagne_pdxlpn.mp4"
         title="Premium Bottle Service"
         // subtitle="Join, it's free"
         description="Elevate your night with Noc Noc’s exclusive Premium Bottle Service where sophistication meets celebration."
@@ -17,7 +16,7 @@ export default function MambaFeatureSection() {
       />
 
       <MambaFeatures
-        videoUrl="/nocnocVideos/video2.mp4"
+        videoUrl="https://res.cloudinary.com/dson4wzib/video/upload/v1761149151/video2_qiuscq.mp4"
         title="Social & Community Events"
         subtitle="Private Events"
         description="Club nights, community gatherings, or social mixers in style.Our flexible layouts and cozy yet energetic atmosphere make every social gathering a hit."
@@ -34,7 +33,7 @@ export default function MambaFeatureSection() {
       />
 
       <MambaFeatures
-        videoUrl="/nocnocVideos/shishaVideo.mp4"
+        videoUrl="https://res.cloudinary.com/dson4wzib/video/upload/v1761149148/shishaVideo_otlyrr.mp4"
         title="Shisha Lounge"
         subtitle="Sit back, exhale, and let the night take over."
         description="At Noc Noc, shisha isn’t just an add-on it’s a full experience.Settle into our sleek lounge area, surrounded by ambient lighting, rhythmic beats, and the city’s most relaxed crowd. Whether you’re catching up with friends or unwinding after a long day, our premium shisha selection sets the perfect mood."
@@ -50,7 +49,7 @@ export default function MambaFeatureSection() {
       />
 
       <MambaFeatures
-        videoUrl="/nocnocVideos/video1.mp4"
+        videoUrl="https://res.cloudinary.com/dson4wzib/video/upload/v1761149150/video1_eewgfo.mp4"
         title="Corporate Events"
         subtitle="Private Events"
         description="Impress your team, clients, and business partners with a seamless corporate experience."

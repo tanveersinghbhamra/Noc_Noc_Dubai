@@ -11,7 +11,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
 
   const videoVariants = {
     hidden: { opacity: 0, scale: 1.05 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 1 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.5 } },
   };
 
   return (
@@ -26,6 +26,8 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         muted
         initial="hidden"
         animate="visible"
+        playsInline
+        preload="metadata"
         variants={videoVariants}
       />
 

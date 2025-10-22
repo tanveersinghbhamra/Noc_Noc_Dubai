@@ -6,8 +6,8 @@ export default function MenuStickyImage() {
         <div
             className="absolute inset-0 bg-center bg-cover"
             style={{
-            backgroundImage: "url('/food&MenuHero.jpeg')",
-            backgroundAttachment: "fixed",
+                backgroundImage: "url('/nocnocImages/food&MenuHero.jpeg')",
+                backgroundAttachment: "fixed",
             }}
         />
 
