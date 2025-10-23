@@ -16,7 +16,7 @@ export default function Home() {
       />
       {/* <BackgroundBeamHome/> */}
       <HomeCarousel/>
-      <BackgroundBoxes />
+      {/* <BackgroundBoxes /> */}
       <FeatureSection/>
       <BackgroundImageReserve/>
     </main>
