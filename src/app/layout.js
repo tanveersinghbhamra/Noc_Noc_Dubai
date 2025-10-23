@@ -52,15 +52,18 @@ const alice = Alice({
 export const metadata = {
   title: "NOC NOC",
   description: "Dubai Restrobar",
-  icons: {
-    icon: [
-      { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/nocnocFavicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/nocnocFavicon/favicon.ico", type: "image/x-icon" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
+  // icons: {
+  //   icon: [
+  //     { url: "/web-app-manifest-192x192.png", type: "image/png", sizes: "192x192" },
+  //     { url: "/web-app-manifest-512x512.png", type: "image/png", sizes: "512x512" },
+  //     // { url: "/apple-icon.png", type: "image/png" },
+  //   ],
+  //   // apple: "/apple-touch-icon.png",
+  //   // other: [
+  //   //   { rel: "android-chrome", url: "/android-chrome-192x192.png" },
+  //   //   { rel: "android-chrome", url: "/android-chrome-512x512.png" },
+  //   // ],
+  // },
 };
 
 export default function RootLayout({ children }) {
