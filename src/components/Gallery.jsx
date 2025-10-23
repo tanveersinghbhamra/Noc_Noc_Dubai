@@ -14,7 +14,7 @@ export default function Gallery() {
           poster="/nocnocImages/mainVideoCover.jpeg"
           alt="mainVideo"   
           controls
-          className="object-cover w-full h-full col-span-2 row-span-2 shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-video"
+          className="object-cover w-full h-full col-span-2 row-span-2 shadow-sm min-h-96 md:col-start-3 md:row-start-1 bg-gray-500 aspect-video"
           style={{ aspectRatio: "16 / 9" }}
           preload="none"  // lazy-load video
         />
@@ -88,7 +88,7 @@ export default function Gallery() {
           alt="DevilsVideo"
           poster="/nocnocImages/devilsCover.jpeg"
           controls
-          className="object-cover h-full col-span-2 row-span-2 shadow-sm cursor-pointer object-w-full min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-video"
+          className="object-cover h-full col-span-2 row-span-2 shadow-sm cursor-pointer object-w-full min-h-96 md:col-start-1 md:row-start-3 bg-gray-500 aspect-video"
           style={{ aspectRatio: "16 / 9" }}
           preload="none"  // lazy-load video
         />
@@ -101,7 +101,7 @@ export default function Gallery() {
           poster="/nocnocImages/seasonFeverCoverImage.png"  
           alt="seasonForeverVideo" 
           controls
-          className="object-cover w-full h-full col-span-2 row-span-2 shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-video"
+          className="object-cover w-full h-full col-span-2 row-span-2 shadow-sm min-h-96 md:col-start-3 md:row-start-1 bg-gray-500 aspect-video"
           style={{ aspectRatio: "16 / 9" }}
           preload="none"  // lazy-load video
         />
