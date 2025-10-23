@@ -214,7 +214,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-15 z-50 flex w-full flex-col items-start justify-start gap-4 px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] bg-gray-900 text-white hover:text-[#C29C7D]",
+            "absolute inset-x-0 top-22 z-50 flex w-full flex-col items-start justify-start gap-4 px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] bg-gray-900 text-white hover:text-[#C29C7D]",
             className
           )}>
           {children}
@@ -229,9 +229,9 @@ export const MobileNavToggle = ({
   onClick
 }) => {
   return isOpen ? (
-    <IconX className="text-white" onClick={onClick} />
+    <IconX className=" mr-4 text-[#C29C7D]" onClick={onClick} />
   ) : (
-    <IconMenu2 className="mr-3 text-[#C29C7D]" onClick={onClick} />
+    <IconMenu2 className="mr-4 text-[#C29C7D]" onClick={onClick} />
   );
 };
 
@@ -246,7 +246,7 @@ export const NavbarLogo = () => {
         width={65}
         height={46} />
         
-      <span className="font-medium text-[#C29C7D] pt-1.5 text-2xl">NOC NOC</span>
+      {/* <span className="font-medium text-[#C29C7D] pt-1.5 text-2xl">NOC NOC</span> */}
     </Link>
   );
 };

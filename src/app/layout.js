@@ -10,6 +10,7 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "700"], // adjust as needed
   variable: "--font-cinzel",
+  display: "swap",
 });
 
 const playfair = Playfair_Display({

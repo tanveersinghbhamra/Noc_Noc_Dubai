@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function MambaFeatures({
   videoUrl,
   image,
@@ -42,10 +40,10 @@ export default function MambaFeatures({
               />
             ) : (
               image && (
-                <Image
+                <img
                   src={image}
                   alt={title}
-                  fill
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               )

@@ -61,7 +61,7 @@ export default function MenuGallery() {
                 {/* Scrollable Images */}
                 <div
                 ref={scrollRef}
-                className="flex gap-8 px-12 overflow-x-auto scroll-smooth"
+                className="flex gap-4 px-4 overflow-x-auto scroll-smooth"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                 <style jsx>{`
@@ -107,25 +107,26 @@ export default function MenuGallery() {
                 </button>
             </div>
             {/* TWO BUTTONS BELOW */}
-            <div className="flex justify-center gap-6 mt-12">
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
                 <Link
-                href="/nocnocPdfs/foodMenu.pdf" // replace with actual food PDF
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-cinzel px-4 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointe"
+                    href="/nocnocPdfs/foodMenu.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-cinzel px-4 sm:px-6 md:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 text-center"
                 >
-                View Food Menu
+                    View Food Menu
                 </Link>
 
                 <Link
-                href="/nocnocPdfs/barMenu.pdf" // replace with actual bar PDF
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer"
+                    href="/nocnocPdfs/barMenu.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-cinzel px-4 sm:px-6 md:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 text-center"
                 >
-                View Bar Menu
+                    View Bar Menu
                 </Link>
             </div>
+
         </div>
     );
 }

@@ -46,10 +46,10 @@ export default function FeatureSections() {
           key={index}
           className={`flex flex-col md:flex-row ${
             index % 2 !== 0 ? "md:flex-row-reverse" : ""
-          } w-full min-h-[600px] md:min-h-[700px]`}
+          } w-full min-h-[400px] md:min-h-[700px]`} // 🔥 reduced height for mobile
         >
-          {/* Image side */}
-          <div className="relative md:w-1/2 w-full h-[350px] md:h-auto">
+          {/* Image Side */}
+          <div className="relative md:w-1/2 w-full h-[300px] sm:h-[350px] md:h-auto">
             <Image
               src={section.image}
               alt={section.title}
@@ -59,16 +59,19 @@ export default function FeatureSections() {
             />
           </div>
 
-          {/* Text side */}
-          <div className="flex md:w-1/2 w-full items-center justify-center px-6 sm:px-10 md:px-16 py-10 md:py-0 bg-black">
+          {/* Text Side */}
+          <div className="flex md:w-1/2 w-full items-center justify-center px-6 sm:px-10 md:px-16 py-6 md:py-0 bg-black">
             <div className="max-w-xl text-center md:text-left">
-              <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-snug">
+              <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-snug">
                 {section.title}
               </h2>
-              <p className=" text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
                 {section.description}
               </p>
-              <Link href={section.link} className="font-cinzel px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300 hover:cursor-pointer">
+              <Link
+                href={section.link}
+                className="font-cinzel inline-block px-8 sm:px-10 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide hover:bg-[#C29C7D] hover:text-black transition-all duration-300"
+              >
                 {section.buttonText}
               </Link>
             </div>
