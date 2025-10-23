@@ -5,6 +5,7 @@ import HomeCarousel from "@/components/HomeCarousel";
 import { BackgroundBoxes } from "@/components/BackgroundBoxes";
 import BackgroundImageReserve from "@/components/BackgroundImage";
 import ImageHero from "@/components/ImageHero";
+import WeeklySchedule from "@/components/WeeklySchedule";
 
 export default function Home() {
   return (
@@ -12,12 +13,13 @@ export default function Home() {
       <ImageHero
           title="Welcome to NOC NOC"
           subtitle="Dubai's Ultimate Nightlife Destination"
-          imageUrl="nocnocImages/energyMeetsElegance.jpeg"
+          imageUrl="/nocnocImages/energyMeetsElegance.jpeg"
       />
-      {/* <BackgroundBeamHome/> */}
+      <BackgroundBeamHome/>
       <HomeCarousel/>
-      {/* <BackgroundBoxes /> */}
+      <BackgroundBoxes />
       <FeatureSection/>
+      <WeeklySchedule/>
       <BackgroundImageReserve/>
     </main>
   );

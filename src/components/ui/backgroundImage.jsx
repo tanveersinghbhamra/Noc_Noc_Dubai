@@ -37,7 +37,7 @@ export default function BackgroundImage({
             // onClick={onButtonClick}
             onClick={() =>
               window.open(
-                "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot",
+                "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20host%20an%20%20event",
                 "_blank"
               )
             }

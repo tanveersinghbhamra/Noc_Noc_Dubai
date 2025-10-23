@@ -17,6 +17,7 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-cinzel",
+  display: "swap",
 });
 
 const playfair = Playfair_Display({

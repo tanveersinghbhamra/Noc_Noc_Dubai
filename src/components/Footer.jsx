@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-10 bg-gray-900 text-white">
+    <footer className="px-6 bg-gray-900 text-white">
       {/* <div className="container mx-auto flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:justify-between">
         Logo
         <div className="flex flex-col items-center lg:items-start space-y-4">
@@ -81,7 +81,7 @@ export default function Footer() {
       </div> */}
 
       {/* Copyright */}
-      <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm text-white">
+      <div className="pb-10 bg-gray-900 border-t border-gray-800 pt-6 text-center text-sm text-white">
         © All rights reserved.
       </div>
     </footer>
