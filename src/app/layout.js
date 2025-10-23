@@ -3,12 +3,19 @@ import Footer from "@/components/Footer";
 import ContactUsSection from "@/components/ContactUs";
 import { Navbar } from "@/components/Navbar";
 
-import { Cinzel, Playfair_Display, Lustria, Lato, Fauna_One, Alice} from "next/font/google";
+import {
+  Cinzel,
+  Playfair_Display,
+  Lustria,
+  Lato,
+  Fauna_One,
+  Alice,
+} from "next/font/google";
 
 // Load each font
 const cinzel = Cinzel({
   subsets: ["latin"],
-  weight: ["400", "700"], // adjust as needed
+  weight: ["400", "700"],
   variable: "--font-cinzel",
   display: "swap",
 });
@@ -30,8 +37,6 @@ const lato = Lato({
   weight: ["300", "400", "700"],
   variable: "--font-lato",
 });
-
-
 
 const fauna = Fauna_One({
   subsets: ["latin"],
@@ -58,7 +63,7 @@ export const metadata = {
   //   // other: [
   //   //   { rel: "android-chrome", url: "/android-chrome-192x192.png" },
   //   //   { rel: "android-chrome", url: "/android-chrome-512x512.png" },
-  //   // ],http://localhost:3000/_next/image?url=%2FnocnocImages%2FdubaiPulse.jpeg&w=3840&q=100
+  //   // ],
   // },
 };
 
@@ -66,12 +71,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${cinzel.variable} ${playfair.variable} ${lustria.variable} ${lato.variable} ${fauna.variable} antialiased bg-gradient-to-b from-slate-950 to-slate-800`}
+        className={`${cinzel.variable} ${playfair.variable} ${lustria.variable} ${lato.variable} ${fauna.variable} ${alice.variable} antialiased bg-gradient-to-b from-slate-950 to-slate-800`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <ContactUsSection/>
-        <Footer/>
+        <ContactUsSection />
+        <Footer />
       </body>
     </html>
   );
