@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-// Move this outside component to keep reference stable
 const imagePaths = Array.from({ length: 7 }, (_, i) => `/nocnocWeek/day${i + 1}.jpg`);
 
 export default function WeeklySchedule() {
@@ -25,7 +24,7 @@ export default function WeeklySchedule() {
     }, delay);
 
     return () => resetTimeout();
-  }, [currentIndex]); // only currentIndex, not the array
+  }, [currentIndex]);
 
   const goToNext = () => {
     resetTimeout();
@@ -38,56 +37,65 @@ export default function WeeklySchedule() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden my-0 md:my-10 lg:my-30">
-      {/* Images */}
+    <section
+      className="relative w-full h-screen overflow-hidden my-0 md:mt-1 lg:mt-30 flex items-center justify-center"
+      style={{
+        backgroundImage: "url('/nocnocImages/weeksBackground.jpg')", // 🔥 your bg image here
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Optional subtle dark overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+      {/* Image Slides */}
       {imagePaths.map((img, index) => (
-       <div
-            key={index}
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 flex items-center justify-center bg-black ${
+        <div
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 flex items-center justify-center ${
             index === currentIndex ? "opacity-100 z-20" : "opacity-0 z-10"
-        }`}
+          }`}
         >
-        <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center">
             <Image
-            src={img}
-            alt={`Slide ${index + 1}`}
-            fill
-            sizes="100vw"
-            className="object-contain max-h-screen w-auto max-w-none"
-            priority={index === 0}
+              src={img}
+              alt={`Slide ${index + 1}`}
+              fill
+              sizes="100vw"
+              className="object-contain max-h-screen w-auto max-w-none drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]"
+              priority={index === 0}
             />
+          </div>
         </div>
-    </div>
       ))}
 
-      {/* Previous Button */}
+      {/* Controls */}
       <button
         onClick={goToPrev}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-3xl p-2 rounded-full z-30"
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white text-3xl p-2 rounded-full z-30"
       >
         ‹
       </button>
-
-      {/* Next Button */}
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-3xl p-2 rounded-full z-30"
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white text-3xl p-2 rounded-full z-30"
       >
         ›
       </button>
 
-      {/* Dots Navigation */}
+      {/* Dots */}
       <div className="absolute bottom-6 w-full flex justify-center space-x-2 z-30">
         {imagePaths.map((_, idx) => (
           <button
             key={idx}
-            className={`w-3 h-3 rounded-full ${
-              idx === currentIndex ? "bg-white" : "bg-gray-500"
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              idx === currentIndex ? "bg-white scale-125" : "bg-gray-500"
             }`}
             onClick={() => setCurrentIndex(idx)}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

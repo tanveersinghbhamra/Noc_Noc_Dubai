@@ -21,7 +21,7 @@ export default function BackgroundImage({
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="font-cinzel relative z-10 flex my-40 flex-col items-center justify-center h-full text-center px-4">
+      <div className="font-cinzel relative z-10 flex  flex-col items-center justify-center h-full text-center px-4">
         {heading && (
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             {heading}
