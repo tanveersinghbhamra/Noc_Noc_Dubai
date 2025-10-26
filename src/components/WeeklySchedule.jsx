@@ -38,7 +38,7 @@ export default function WeeklySchedule() {
 
   return (
     <section
-      className="relative w-full h-screen overflow-hidden my-0 md:mt-1 lg:mt-30 flex items-center justify-center"
+      className="relative w-full h-screen overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 flex items-center justify-center"
       style={{
         backgroundImage: "url('/nocnocImages/weeksBackground.jpg')", // 🔥 your bg image here
         backgroundSize: "cover",
