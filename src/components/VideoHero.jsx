@@ -28,7 +28,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         animate="visible"
         playsInline
         preload="metadata"
-        variants={videoVariants}
+        // variants={videoVariants}
       />
 
       {/* Overlay to darken video */}
@@ -39,7 +39,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         className="relative z-10 text-[#C29C7D] px-4"
         initial="hidden"
         animate="visible"
-        variants={textVariants}
+        // variants={textVariants}
       >
         <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
         <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">{subtitle}</p>
