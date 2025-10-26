@@ -179,7 +179,97 @@ export default function Gallery() {
           style={{ aspectRatio: "16 / 9" }}
           preload="none"  // lazy-load video
         />
-      </div>            
+      </div>
+
+
+       {/* Third gallery container */}
+      <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
+        <video
+          src="https://res.cloudinary.com/dson4wzib/video/upload/v1761472577/WhatsApp_Video_2025-10-24_at_6.43.50_PM_no4rbw.mp4"
+          poster="/nocnocImages/perfectCover.jpeg"  
+          alt="seasonForeverVideo" 
+          controls
+          className="object-cover w-full h-full col-span-2 row-span-2 shadow-sm min-h-96 md:col-start-3 md:row-start-1 bg-gray-500 aspect-video"
+          style={{ aspectRatio: "16 / 9" }}
+          preload="none"  // lazy-load video
+        />
+        
+        <img
+          alt="groupMazzeImage"
+          className="w-full h-auto object-cover bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/groupMazze.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/groupMazze.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="pajisImage"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/pajisPhoto.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/pajisPhoto.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="threeLadiesCelebrating"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/threeLadiesCelebrating.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/threeLadiesCelebrating.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="foodAndShushi"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/food&sushi.jpeg"
+          onClick={() => setSelectedImage("/nocnocImages/food&sushi.jpeg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="d4Image"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/d4.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/d4.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="d1Image"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/d1.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/d1.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="d2Image"
+          className="w-full object-cover h-auto bg-gray-500 shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/d2.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/d2.jpg")}
+          loading="lazy"
+        />
+        
+        <img
+          alt="d3Image"
+          className="w-full h-auto object-cover bg-gray-500 rounded shadow-sm min-h-50 aspect-[5/3] cursor-pointer"
+          src="/nocnocImages/d3.jpg"
+          onClick={() => setSelectedImage("/nocnocImages/d3.jpg")}
+          loading="lazy"
+        />
+
+        <video
+          src="https://res.cloudinary.com/dson4wzib/video/upload/v1761472576/WhatsApp_Video_2025-10-24_at_6.45.00_PM_hvqaro.mp4"
+          alt="LadiesNightVideo"
+          poster="/nocnocImages/discoCover.jpeg"
+          controls
+          className="object-cover h-full col-span-2 row-span-2 bg-gray-500 rounded shadow-sm cursor-pointer object-w-full min-h-96 md:col-start-1 md:row-start-3 aspect-video"
+          style={{ aspectRatio: "16 / 9" }}
+          preload="none"  // lazy-load video
+        />
+      </div>
+      
+                  
 
       {selectedImage && (
         <div
