@@ -2,6 +2,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import ContactUsSection from "@/components/ContactUs";
 import { Navbar } from "@/components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import {
   Cinzel,
