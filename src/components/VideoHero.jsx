@@ -15,7 +15,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
   };
 
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-screen md:min-h-[80vh]">
+    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-screen md:min-h-[100vh]">
       
       {/* Video Background with delayed fade-in */}
       <motion.video
