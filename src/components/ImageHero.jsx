@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ImageHero({ title, subtitle, imageUrl }) {
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-screen md:min-h-[80vh] bg-[#111]">
+    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-screen md:min-h-[100vh] bg-[#111]">
       
       {/* --- Text renders immediately for fast LCP --- */}
       <div className="relative z-10 text-[#C29C7D] px-4">

@@ -47,7 +47,7 @@ export default function BackgroundImage({
                 "_blank"
               )
             }
-            className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#25D366] font-semibold uppercase tracking-wide rounded-2xl hover:bg-[#25D366] hover:text-black transition-all duration-300 cursor-pointer"
+            className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#25D366] font-semibold uppercase tracking-wide  hover:bg-[#25D366] hover:text-black transition-all duration-300 cursor-pointer"
           >
             {/* WhatsApp SVG */}
             <svg
@@ -69,7 +69,7 @@ export default function BackgroundImage({
           {/* Call Button */}
           <button
             onClick={() => (window.location.href = `tel:${whatsappNumber}`)}
-            className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide rounded-2xl hover:bg-[#C29C7D] hover:text-black transition-all duration-300 cursor-pointer"
+            className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide  hover:bg-[#C29C7D] hover:text-black transition-all duration-300 cursor-pointer"
           >
             {/* Call SVG */}
             <svg
