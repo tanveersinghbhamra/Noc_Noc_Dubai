@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Restrobar Lounge",
+              "@type": "Restaurant",
               name: "Noc Noc Dubai",
               address: {
                 addressStreet: "Recreation Club - Mena Jabal Ali - Dubai - United Arab Emirates",
