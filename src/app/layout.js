@@ -54,9 +54,24 @@ const alice = Alice({
   variable: "--font-alice",
 });
 
+// export const metadata = {
+//   title: "NOC NOC",
+//   description: "Dubai Restrobar",
+//   icons: {
+//     icon: [
+//       { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+//       { url: "/nocnocFavicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+//       { url: "/nocnocFavicon/favicon.ico", type: "image/x-icon" },
+//     ],
+//     apple: "/apple-touch-icon.png",
+//   },
+//   manifest: "/site.webmanifest",
+// };
+
 export const metadata = {
-  title: "NOC NOC",
-  description: "Dubai Restrobar",
+  title: "Noc Noc Dubai | Lounge, Restrobar & Nightlife Destination",
+  description:
+    "Noc Noc Dubai is the ultimate restrobar and lounge offering world-class food, drinks, and nightlife vibes in the heart of Dubai.",
   icons: {
     icon: [
       { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -65,8 +80,52 @@ export const metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest",
+  // manifest: "/site.webmanifest",
+  keywords: [
+    "noc noc dubai",
+    "dubai restrobar",
+    "dubai nightlife",
+    "dubai lounge",
+    "nocnocdubai",
+  ],
+  openGraph: {
+    title: "Noc Noc Dubai | Lounge & Restrobar",
+    description:
+      "Experience premium food, cocktails, and nightlife at Noc Noc Dubai.",
+    url: "https://www.nocnocdubai.ae",
+    siteName: "Noc Noc Dubai",
+    images: [
+      {
+        url: "https://www.nocnocdubai.ae/og-image.jpg", // put a real image from your site
+        width: 1200,
+        height: 630,
+        alt: "Noc Noc Dubai Lounge",
+      },
+    ],
+    locale: "en_AE",
+    type: "website",
+  },
 };
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Restrobar Lounge",
+      name: "Noc Noc Dubai",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressCountry: "AE",
+      },
+      servesCuisine: "Continental, Fusion, Bar Food",
+      // priceRange: "$$",
+      telephone: "+9710547063640",
+      url: "https://www.nocnocdubai.ae",
+    }),
+  }}
+/>
 
 export default function RootLayout({ children }) {
   return (

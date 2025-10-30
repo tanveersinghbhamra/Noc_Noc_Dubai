@@ -4,6 +4,20 @@ import HomeCarousel from "@/components/HomeCarousel";
 import { BackgroundBoxes } from "@/components/BackgroundBoxes";
 import WeeklySchedule from "@/components/WeeklySchedule";
 import VideoHero from "@/components/VideoHero";
+
+export const metadata = {
+  title: "Noc Noc Dubai | Lounge, Restrobar & Nightlife Destination",
+  description:
+    "Discover Noc Noc Dubai — a premium restrobar and lounge offering world-class food, drinks, and nightlife experiences in the heart of Dubai.",
+  keywords: [
+    "noc noc dubai",
+    "dubai restrobar",
+    "dubai nightlife",
+    "nocnocdubai",
+    "dubai lounge",
+  ],
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
