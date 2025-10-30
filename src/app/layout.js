@@ -107,29 +107,31 @@ export const metadata = {
   },
 };
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Restrobar Lounge",
-      name: "Noc Noc Dubai",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Dubai",
-        addressCountry: "AE",
-      },
-      servesCuisine: "Continental, Fusion, Bar Food",
-      // priceRange: "$$",
-      telephone: "+9710547063640",
-      url: "https://www.nocnocdubai.ae",
-    }),
-  }}
-/>
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restrobar Lounge",
+              name: "Noc Noc Dubai",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Dubai",
+                addressCountry: "AE",
+              },
+              servesCuisine: "Continental, Fusion, Bar Food",
+              // priceRange: "$$",
+              telephone: "+9710547063640",
+              url: "https://www.nocnocdubai.ae",
+            }),
+          }}
+        />
+
+      </head>
       <body
         className={`${cinzel.variable} ${playfair.variable} ${lustria.variable} ${lato.variable} ${fauna.variable} ${alice.variable} antialiased bg-black`}
       >
