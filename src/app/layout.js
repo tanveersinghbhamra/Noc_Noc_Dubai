@@ -46,8 +46,9 @@ export const metadata = {
       { url: "/nocnocFavicon/android-chrome-192x192.png"},
       { url: "/nocnocFavicon/android-chrome-512x512.png"},
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/nocnocFavicon/apple-touch-icon.png",
     shortcut: "/nocnocFavicon/favicon.ico",
+    manifest: "/nocnocFavicon/site.webmanifest",
   },
   keywords: [
     "noc noc dubai",
@@ -88,7 +89,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="manifest" href="/nocnocFavicon/site.webmanifest" />
         <link rel="canonical" href="https://www.nocnocdubai.ae" />
         <script
           type="application/ld+json"
