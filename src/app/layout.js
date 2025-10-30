@@ -40,11 +40,14 @@ export const metadata = {
     "Noc Noc Dubai is the ultimate restrobar and lounge offering world-class food, drinks, and nightlife vibes in the heart of Dubai.",
   icons: {
     icon: [
+      { url: "/nocnocFavicon/favicon.ico", type: "image/x-icon" },
       { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/nocnocFavicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/nocnocFavicon/favicon.ico", type: "image/x-icon" },
+      { url: "/nocnocFavicon/android-chrome-192x192.png"},
+      { url: "/nocnocFavicon/android-chrome-512x512.png"},
     ],
     apple: "/apple-touch-icon.png",
+    shortcut: "/nocnocFavicon/favicon.ico",
   },
   keywords: [
     "noc noc dubai",
@@ -85,6 +88,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="canonical" href="https://www.nocnocdubai.ae" />
         <script
           type="application/ld+json"
