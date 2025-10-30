@@ -38,20 +38,15 @@ export default function WeeklySchedule() {
 
   return (
     <section
-      className="relative w-full h-[90vh] overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 flex items-center justify-center"
-      style={{
-        // backgroundImage: "url('/nocnocImages/weeksBackground.jpg')", // 🔥 your bg image here
-        backgroundImage: "url('/nocnocImages/weekScheduleBGCover.webp')", // 🔥 your bg image here
-        backgroundImage: "url('/nocnocImages/weeklyCoverBG2.jpg')",
-        // backgroundImage: "url(https://nightsindubai.com/wp-content/uploads/2022/06/NOC-NOC-4.jpg)",
-        // backgroundImage: "url()",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="
+        relative w-full h-[90vh] overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 
+        flex items-center justify-center
+        bg-none sm:bg-none md:bg-[url('/nocnocImages/weeklyCoverBG2.jpg')]
+        bg-cover bg-center bg-no-repeat
+      "
     >
-      {/* Optional subtle dark overlay for better contrast */}
-      <div className="absolute inset-0 bg-black/60 z-0"></div>
+      {/* Dark overlay (only visible when bg image exists) */}
+      <div className="absolute inset-0 bg-black/60 z-0 hidden md:block"></div>
 
       {/* Image Slides */}
       {imagePaths.map((img, index) => (

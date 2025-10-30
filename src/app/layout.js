@@ -4,6 +4,8 @@ import ContactUsSection from "@/components/ContactUs";
 import { Navbar } from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import BackgroundImageReserve from "@/components/BackgroundImage";
+import { Toaster } from "react-hot-toast";
+
 
 import {
   Cinzel,
@@ -74,6 +76,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Toaster position="top-center" reverseOrder={false} />
         <BackgroundImageReserve/>
         <ContactUsSection />
         <Footer />
