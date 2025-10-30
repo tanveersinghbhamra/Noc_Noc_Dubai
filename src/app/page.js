@@ -8,7 +8,7 @@ import VideoHero from "@/components/VideoHero";
 export const metadata = {
   title: "Noc Noc Dubai | Lounge, Restrobar & Nightlife Destination",
   description:
-    "Discover Noc Noc Dubai — a premium restrobar and lounge offering world-class food, drinks, and nightlife experiences in the heart of Dubai.",
+    "Discover Noc Noc Dubai, a premium restrobar and lounge offering world class food, drinks, and nightlife experiences in the heart of Dubai.",
   keywords: [
     "noc noc dubai",
     "dubai restrobar",
