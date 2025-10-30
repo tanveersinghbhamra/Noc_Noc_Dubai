@@ -119,12 +119,11 @@ export default function RootLayout({ children }) {
               "@type": "Restrobar Lounge",
               name: "Noc Noc Dubai",
               address: {
-                "@type": "PostalAddress",
+                addressStreet: "Recreation Club - Mena Jabal Ali - Dubai - United Arab Emirates",
                 addressLocality: "Dubai",
                 addressCountry: "AE",
               },
               servesCuisine: "Continental, Fusion, Bar Food",
-              // priceRange: "$$",
               telephone: "+9710547063640",
               url: "https://www.nocnocdubai.ae",
             }),
