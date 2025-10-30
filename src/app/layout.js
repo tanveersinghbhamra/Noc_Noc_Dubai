@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ContactUsSection from "@/components/ContactUs";
 import { Navbar } from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import BackgroundImageReserve from "@/components/BackgroundImage";
 
 import {
   Cinzel,
@@ -69,10 +70,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${cinzel.variable} ${playfair.variable} ${lustria.variable} ${lato.variable} ${fauna.variable} ${alice.variable} antialiased bg-gradient-to-b from-slate-950 to-slate-800`}
+        className={`${cinzel.variable} ${playfair.variable} ${lustria.variable} ${lato.variable} ${fauna.variable} ${alice.variable} antialiased bg-black`}
       >
         <Navbar />
         {children}
+        <BackgroundImageReserve/>
         <ContactUsSection />
         <Footer />
       </body>

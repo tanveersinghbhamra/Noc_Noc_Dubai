@@ -38,7 +38,7 @@ export default function WeeklySchedule() {
 
   return (
     <section
-      className="relative w-full h-screen overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 flex items-center justify-center"
+      className="relative w-full h-[90vh] overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 flex items-center justify-center"
       style={{
         // backgroundImage: "url('/nocnocImages/weeksBackground.jpg')", // 🔥 your bg image here
         backgroundImage: "url('/nocnocImages/weekScheduleBGCover.webp')", // 🔥 your bg image here
@@ -64,7 +64,7 @@ export default function WeeklySchedule() {
               alt={`Slide ${index + 1}`}
               fill
               sizes="100vw"
-              className="object-contain max-h-screen w-auto max-w-none drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]"
+              className="object-contain max-h-[90vh] w-auto max-w-none drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]"
               priority={index === 0}
             />
           </div>
