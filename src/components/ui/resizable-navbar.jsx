@@ -229,9 +229,9 @@ export const MobileNavToggle = ({
   onClick
 }) => {
   return isOpen ? (
-    <IconX className=" mr-4 text-[#C29C7D]" onClick={onClick} />
+    <IconX className=" mr-4 sm:mr-15 text-[#C29C7D]" onClick={onClick} />
   ) : (
-    <IconMenu2 className="mr-4 text-[#C29C7D]" onClick={onClick} />
+    <IconMenu2 className="mr-4 sm:mr-15 text-[#C29C7D]" onClick={onClick} />
   );
 };
 
@@ -239,12 +239,12 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 ml-3 flex items-center  font-normal text-black">
+      className="relative z-20 ml-3 sm:ml-15  flex items-center  font-normal text-black ">
       <Image
-        src="/nocnocImages/nocnocLogo.svg"
+        src="/nocnocImages/nocnocLogoSher2.png"
         alt="nocnocLogo"
-        width={65}
-        height={46} />
+        width={75}
+        height={50} />
         
       {/* <span className="font-medium text-[#C29C7D] pt-1.5 text-2xl">NOC NOC</span> */}
     </Link>

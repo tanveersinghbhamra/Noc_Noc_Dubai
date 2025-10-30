@@ -35,7 +35,7 @@ export default function ContactUsSection() {
                                     <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"/>
                             </svg>
 
-                            <span>Timings 11:00 am - 1:30 am</span>
+                            <span>Timings 11:00 am - 2 am</span>
                         </p>
                         <p className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
@@ -54,7 +54,7 @@ export default function ContactUsSection() {
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                             </svg>
-                            <span>marketing.nocnoc@gmail.com</span>
+                            <span>restaurantnocnoc@gmail.com</span>
                         </p>
                         <p className="flex items-center">
                             <Link href="https://www.instagram.com/nocnocdubai/">
@@ -62,7 +62,7 @@ export default function ContactUsSection() {
                                 <path fill="currentColor" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/>
                                 </svg>
                             </Link>
-                            <span> Follow NOC NOC for more on Instagram - nocnocdubai</span>
+                            <Link href="https://www.instagram.com/nocnocdubai/"><span>nocnocdubai</span></Link>
                         </p>
                     </div>
                     <div className="mt-6 w-full h-64 md:h-80 lg:h-96 overflow-hidden">
