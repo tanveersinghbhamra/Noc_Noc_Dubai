@@ -44,7 +44,7 @@ export default function WeeklySchedule() {
         backgroundImage: "url('/nocnocImages/weekScheduleBGCover.webp')", // 🔥 your bg image here
         backgroundImage: "url('/nocnocImages/weeklyCoverBG2.jpg')",
         // backgroundImage: "url(https://nightsindubai.com/wp-content/uploads/2022/06/NOC-NOC-4.jpg)",
-        backgroundImage: "url()",
+        // backgroundImage: "url()",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
