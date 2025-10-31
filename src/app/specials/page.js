@@ -4,9 +4,9 @@ import MambaFeatureSection from '@/components/MambaFeatureSection'
 import ImageHero from '@/components/ImageHero'
 
 export const metadata = {
-  title: "Specials | Noc Noc Dubai - Weekly Events & Offers",
+  title: "Specials | Noc Noc Dubai - Special Events & Offers",
   description:
-    "Check out Noc Noc Dubai’s latest specials — weekly events, theme nights, and exclusive offers designed to elevate your nightlife experience.",
+    "Check out Noc Noc Dubai’s latest specials — events, theme nights, and exclusive offers designed to elevate your nightlife experience.",
   keywords: [
     "noc noc specials",
     "dubai events",
