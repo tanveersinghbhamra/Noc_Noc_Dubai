@@ -172,7 +172,7 @@ export default function ContactUsSection() {
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               placeholder="Leroy Jenkins"
-              className="block w-full py-3 px-2 mt-2 rounded-sm shadow-sm border border-gray-300 focus:outline-none text-black"
+              className="block w-full py-3 px-2 mt-2 rounded-sm shadow-sm border border-gray-300 focus:outline-none text-white"
             />
           </label>
 
@@ -183,7 +183,7 @@ export default function ContactUsSection() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="leroy@jenkins.com"
-              className="block w-full py-3 px-2 mt-2 rounded-sm shadow-sm border border-gray-300 focus:outline-none text-black"
+              className="block w-full py-3 px-2 mt-2 rounded-sm shadow-sm border border-gray-300 focus:outline-none text-white"
             />
           </label>
 
