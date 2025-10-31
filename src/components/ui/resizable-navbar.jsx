@@ -241,7 +241,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 ml-3 sm:ml-15  flex items-center  font-normal text-black ">
       <Image
-        src="/nocnocImages/nocnocLogoSher2.png"
+        src="/nocnocImages/nocnocLogoSher.png"
         alt="nocnocLogo"
         width={75}
         height={50} />
