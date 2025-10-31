@@ -40,14 +40,14 @@ export const metadata = {
     "Noc Noc Dubai is the ultimate restrobar and lounge offering world-class food, drinks, and nightlife vibes in the heart of Dubai.",
   icons: {
     icon: [
-      { url: "/nocnocFavicon/favicon.ico", type: "image/x-icon" },
       { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/nocnocFavicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/nocnocFavicon/android-chrome-192x192.png"},
       { url: "/nocnocFavicon/android-chrome-512x512.png"},
+      { url: "/favicon.ico", type: "image/x-icon" },
     ],
     apple: "/nocnocFavicon/apple-touch-icon.png",
-    shortcut: "/nocnocFavicon/favicon.ico",
+    shortcut: "/favicon.ico",
     manifest: "/site.webmanifest",
   },
   keywords: [
@@ -89,7 +89,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://www.nocnocdubai.ae" />
         <script
           type="application/ld+json"
@@ -99,6 +98,7 @@ export default function RootLayout({ children }) {
               "@type": "Restaurant",
               name: "Noc Noc Dubai",
               image: "https://www.nocnocdubai.ae/nocnocImages/dubaiPulse.jpeg",
+              logo: "https://www.nocnocdubai.ae/nocnocFavicon/android-chrome-512x512.png",
               url: "https://www.nocnocdubai.ae",
               telephone: "+9710547063640",
               address: {
