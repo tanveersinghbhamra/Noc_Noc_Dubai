@@ -37,16 +37,17 @@ export const metadata = {
     "Noc Noc Dubai is the ultimate restrobar and lounge offering world-class food, drinks, and nightlife vibes in the heart of Dubai.",
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/nocnocFavicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/nocnocFavicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/nocnocFavicon/android-chrome-192x192.png"},
-      { url: "/nocnocFavicon/android-chrome-512x512.png"},
-      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/nocnocFavicon/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/nocnocFavicon/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: "/nocnocFavicon/apple-touch-icon.png",
     shortcut: "/favicon.ico",
     manifest: "/site.webmanifest",
   },
+
   keywords: [
     "noc noc dubai",
     "dubai restrobar",
