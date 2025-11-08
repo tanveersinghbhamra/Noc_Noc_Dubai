@@ -2,6 +2,7 @@ import React from 'react'
 import VortexSection from '@/components/Vortex'
 import MambaFeatureSection from '@/components/MambaFeatureSection'
 import ImageHero from '@/components/ImageHero'
+import BackgroundImageReserve from '@/components/BackgroundImage';
 
 export const metadata = {
   title: "Specials | Noc Noc Dubai - Special Events & Offers",
@@ -27,6 +28,7 @@ export default function Specials() {
         />
         <VortexSection/>
         <MambaFeatureSection/>
+        <BackgroundImageReserve/>
     </div>
   )
 }

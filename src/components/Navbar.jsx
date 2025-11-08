@@ -35,7 +35,7 @@ export function Navbar() {
     },
     {
       name: "Contact",
-      link: "#ContactSection",
+      link: "/#ContactSection"
     },
   ];
 

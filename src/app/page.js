@@ -4,6 +4,8 @@ import HomeCarousel from "@/components/HomeCarousel";
 import { BackgroundBoxes } from "@/components/BackgroundBoxes";
 import WeeklySchedule from "@/components/WeeklySchedule";
 import VideoHero from "@/components/VideoHero";
+import BackgroundImageReserve from "@/components/BackgroundImage";
+import ContactUsSection from "@/components/ContactUs";
 
 export const metadata = {
   title: "Noc Noc Dubai | Lounge, Restrobar & Nightlife Destination",
@@ -31,6 +33,8 @@ export default function Home() {
       <BackgroundBoxes />
       <FeatureSection/>
       <WeeklySchedule/>
+      <BackgroundImageReserve/>
+      <ContactUsSection/>
     </main>
   );
 }
