@@ -47,7 +47,7 @@ export default function ContactUsSection() {
     console.log("Phone:", phone);
     console.log("Interests:", interests);
 
-    toast.success("🎉 Welcome aboard! You are subscribed for updates.", {
+    toast.success("Welcome aboard! You are subscribed for updates.", {
       duration: 3000,
       style: {
         background: "#333",
