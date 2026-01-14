@@ -39,7 +39,7 @@ export default function WeeklySchedule() {
   return (
     <section
       className="
-        relative w-full h-[90vh] overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 
+        relative w-full min-h-[70svh] md:h-[90vh] overflow-hidden mt-15 mb-20 md:mt-1 sm:mb-25 lg:mt-30 
         flex items-center justify-center
         bg-none sm:bg-none md:bg-[url('/nocnocImages/weeklyCoverBG2.jpg')]
         bg-cover bg-center bg-no-repeat
@@ -52,8 +52,12 @@ export default function WeeklySchedule() {
       {imagePaths.map((img, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 flex items-center justify-center ${
-            index === currentIndex ? "opacity-100 z-20" : "opacity-0 z-10"
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out flex items-center justify-center ${
+            index === currentIndex ? 
+                  "translate-x-0 z-20"
+                  : index < currentIndex
+                  ? "-translate-x-full z-10"
+                  : "translate-x-full z-10"}
           }`}
         >
           <div className="relative w-full h-full flex items-center justify-center">
@@ -61,8 +65,15 @@ export default function WeeklySchedule() {
               src={img}
               alt={`Slide ${index + 1}`}
               fill
-              sizes="100vw"
-              className="object-contain max-h-[90vh] w-auto max-w-none drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]"
+              sizes="(max-width: 768px) 100vw, 90vw"
+              // className="object-contain max-h-[90vh] w-auto max-w-none drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]"
+              className="
+                object-contain
+                md:object-contain
+                max-h-[65svh] md:max-h-[90vh]
+                w-auto
+                drop-shadow-none md:drop-shadow-[0_0_20px_rgba(0,0,0,0.7)]
+              "
               priority={index === 0}
             />
           </div>
