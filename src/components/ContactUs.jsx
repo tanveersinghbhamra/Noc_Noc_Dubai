@@ -159,7 +159,7 @@ export default function ContactUsSection() {
           </div> */}
 
           <div className="mt-6 w-full h-64 md:h-80 lg:h-96 relative overflow-hidden">
-            Mobile overlay
+            {/* Mobile overlay */}
             <Link
               href="https://www.google.com/maps/dir//Recreation+Club+-+Mena+Jabal+Ali+-+Dubai+-+United+Arab+Emirates/@25.0760224,55.2274879,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e5f1391e42a4db1:0x416b5f5147db2087!2m2!1d55.1182004!2d25.0340502?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
