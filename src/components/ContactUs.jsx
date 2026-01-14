@@ -148,7 +148,7 @@ export default function ContactUsSection() {
             </p>
           </div>
 
-          <div className="mt-6 w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+          {/* <div className="mt-6 w-full h-64 md:h-80 lg:h-96 overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.001389858079!2d55.118149900000006!3d25.034026900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1391e42a4db1%3A0x416b5f5147db2087!2sNoc%20Noc!5e0!3m2!1sen!2sin!4v1761067922409!5m2!1sen!2sin"
               className="w-full h-full border-0"
@@ -156,6 +156,25 @@ export default function ContactUsSection() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+          </div> */}
+
+          <div className="mt-6 w-full h-64 md:h-80 lg:h-96 relative overflow-hidden">
+            {/* Mobile overlay */}
+            <Link
+              href="https://www.google.com/maps/dir//Recreation+Club+-+Mena+Jabal+Ali+-+Dubai+-+United+Arab+Emirates/@25.0760224,55.2274879,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e5f1391e42a4db1:0x416b5f5147db2087!2m2!1d55.1182004!2d25.0340502?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 text-white text-sm font-semibold md:hidden"
+            >
+              Tap to open map
+            </Link>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.001389858079!2d55.118149900000006!3d25.034026900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1391e42a4db1%3A0x416b5f5147db2087!2sNoc%20Noc!5e0!3m2!1sen!2sin!4v1761067922409!5m2!1sen!2sin"
+              className="w-full h-full border-0 pointer-events-none md:pointer-events-auto"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
 
