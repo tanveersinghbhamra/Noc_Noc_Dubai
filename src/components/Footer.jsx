@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="flex items-center justify-center lg:justify-start gap-2">
               <MapPin size={16} className="text-[#C29C7D] shrink-0 hidden sm:block" />
               <p className="text-sm text-gray-400 leading-snug text-center lg:text-left">
-                Dubai, Dubai, Dubai, Dubai, United Arab Emirates, 186463
+                Noc Noc, Jebel Ali Recreational Club, Near IBN Batuta Mal, Jebel Ali, Dubai
               </p>
             </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="tel:+971506947797"
                 className="text-sm text-gray-400 hover:text-[#C29C7D] transition-colors duration-300"
               >
-                +971506947797
+                +971562717681
               </a>
             </div>
           </div>
