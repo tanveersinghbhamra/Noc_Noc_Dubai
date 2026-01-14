@@ -100,7 +100,7 @@ export default function ContactUsSection() {
                 ></path>
               </svg>
               <span>
-                  Noc Noc, Jebel Ali Recreational Club, Near IBN Batuta Mal, Jebel Ali, Dubai
+                   Noc Noc, Recreation Club, Near Ibn Battuta Mall, Mena Jabal Ali, Dubai, United Arab Emirates
               </span>
             </p>
             <p className="flex items-center">
