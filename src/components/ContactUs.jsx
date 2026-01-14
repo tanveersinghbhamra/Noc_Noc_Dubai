@@ -77,7 +77,7 @@ export default function ContactUsSection() {
           <div className="space-y-4">
             <p className="flex items-center">
               <svg
-                className="text-white w-5 h-5 mr-2 sm:mr-6"
+                className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ export default function ContactUsSection() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 20"
-                className="w-6 h-6 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0"
+                className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
               >
                 <path
                   fillRule="evenodd"
@@ -109,7 +109,7 @@ export default function ContactUsSection() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                className="w-5 h-5 mr-2 sm:mr-6"
+                className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
                 viewBox="0 0 20 20"
               >
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
@@ -120,7 +120,7 @@ export default function ContactUsSection() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                className="w-5 h-5 mr-2 sm:mr-6"
+                className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
                 viewBox="0 0 20 20"
               >
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
@@ -131,7 +131,7 @@ export default function ContactUsSection() {
             <p className="flex items-center">
               <Link href="https://www.instagram.com/nocnocdubai/">
                 <svg
-                  className="text-white w-5 h-5 mr-2 sm:mr-6"
+                  className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
