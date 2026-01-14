@@ -10,7 +10,7 @@ export default function BackgroundImage({
   const whatsappMessage = "Hello Noc Noc! I want to host an event.";
 
   return (
-    <section className="relative w-full sm:h-100 h-screen">
+    <section className="relative w-full sm:h-100 h-screen mt-25">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

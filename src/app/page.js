@@ -31,8 +31,8 @@ export default function Home() {
       <BackgroundBeamHome/>
       <HomeCarousel/>
       <BackgroundBoxes />
-      <FeatureSection/>
       <WeeklySchedule/>
+      <FeatureSection/>
       <BackgroundImageReserve/>
       <ContactUsSection/>
     </main>
