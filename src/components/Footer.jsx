@@ -17,8 +17,8 @@ export default function Footer() {
             </h4>
 
             {/* ADDRESS ROW */}
-            <div className="flex items-center justify-center lg:justify-start gap-2">
-              <MapPin size={16} className="text-[#C29C7D] shrink-0 hidden sm:block" />
+            <div className="flex items-start justify-center lg:justify-start gap-2">
+              <MapPin size={16} className="text-[#C29C7D] shrink-0 hidden sm:block mt-1" />
               <p className="text-sm text-gray-400 leading-snug text-center lg:text-left">
                 Noc Noc, Recreation Club, Near Ibn Battuta Mall, Mena Jabal Ali, Dubai, United Arab Emirates
               </p>

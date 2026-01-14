@@ -86,12 +86,12 @@ export default function ContactUsSection() {
               </svg>
               <span>Timings 11:00 am - 2 am</span>
             </p>
-            <p className="flex items-start">
+            <div className="flex items-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 20"
-                className="w-5 h-5 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white"
+                className="w-5 h-6 sm:w-5 sm:h-5 mr-3 sm:mr-6 flex-shrink-0 text-white mt-1"
               >
                 <path
                   fillRule="evenodd"
@@ -100,10 +100,10 @@ export default function ContactUsSection() {
                 />
               </svg>
 
-              <span className="text-sm sm:text-base">
+              <p className="text-sm sm:text-base">
                 Noc Noc, Recreation Club, Near Ibn Battuta Mall, Mena Jabal Ali, Dubai, United Arab Emirates
-              </span>
-            </p>
+              </p>
+            </div>
 
             <p className="flex items-center">
               <svg
