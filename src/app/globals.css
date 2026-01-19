@@ -197,22 +197,9 @@ body {
   contain: layout paint;
 }
 
-/* html,
+html,
 body {
   height: auto;
   overscroll-behavior-y: none;
   -webkit-overflow-scrolling: touch;
-} */
-
-html,
-body {
-  height: calc(var(--vh, 1vh) * 100);
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: touch;
 }
-
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-

@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from "react-hot-toast";
-import ViewportFix from "./_app";
 
 import {
   Cinzel,
@@ -117,7 +116,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${cinzel.variable} ${lato.variable} ${alice.variable} antialiased bg-black`}
       >
-         <ViewportFix />
         <Navbar />
         {children}
         <Toaster position="top-center" reverseOrder={false} />
