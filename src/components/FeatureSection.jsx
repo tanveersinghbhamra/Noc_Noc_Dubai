@@ -40,7 +40,7 @@ export default function FeatureSections() {
   ];
 
   return (
-    <section className="text-white bg-black container flex flex-col mx-auto gap-18 sm:gap-35 sm:mb-25" id="FeatureSection">
+    <section className="text-white bg-black container flex flex-col mx-auto gap-18 sm:gap-35 sm:mb-30 mb-25" id="FeatureSection">
       {sections.map((section, index) => (
         <div
           key={index}

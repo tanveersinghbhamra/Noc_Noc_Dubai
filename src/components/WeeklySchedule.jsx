@@ -12,7 +12,7 @@ export default function WeeklySchedule() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef(null);
 
-  const delay = 5000;
+  const delay = 3000;
 
   const resetTimeout = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
