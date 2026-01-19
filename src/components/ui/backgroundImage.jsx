@@ -21,9 +21,9 @@ export default function BackgroundImage({
       ></div>
 
       {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-black/50"></div> */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/20"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/20"></div> */}
 
 
         /*
@@ -102,7 +102,7 @@ export default function BackgroundImage({
     className="
       max-w-3xl w-full
       text-center
-      bg-black/55 backdrop-blur-sm
+       backdrop-blur-xs
       px-6 py-8 sm:px-10 sm:py-10
       rounded-xl
       border border-white/10
