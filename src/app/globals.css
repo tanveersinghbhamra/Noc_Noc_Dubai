@@ -143,14 +143,14 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px white inset !important;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
-/* 
+}
+
 html, body {
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-} */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
 
 :root {
   --font-cinzel: 'Cinzel', serif;
@@ -197,25 +197,10 @@ body {
   contain: layout paint;
 }
 
-html {
-  height: auto;
-}
-
-body {
-  min-height: 100%;
-  overflow-x: hidden;
-  overscroll-behavior-y: auto; /* IMPORTANT */
-  -webkit-overflow-scrolling: touch;
-}
-
 html,
 body {
-  height: 100%;
-  overflow: hidden;
+  height: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
-
-
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
