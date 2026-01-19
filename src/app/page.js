@@ -28,11 +28,11 @@ export default function Home() {
           subtitle="Dubai's Ultimate Nightlife Destination"
           videoUrl="https://res.cloudinary.com/dson4wzib/video/upload/v1761465981/It_s_NOC_NOC_Let_s_ring_in_2025_with_unstoppable_energy_endless_vibes_and_unforgettable_m_qhdy4h.mp4"
       />
+      <WeeklySchedule/>
       <BackgroundBeamHome/>
       <HomeCarousel/>
       <BackgroundBoxes />
       <FeatureSection/>
-      <WeeklySchedule/>
       <BackgroundImageReserve/>
       <ContactUsSection/>
     </main>
