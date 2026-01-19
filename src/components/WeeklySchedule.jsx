@@ -33,7 +33,7 @@ export default function WeeklySchedule() {
     <section
       className="
         relative w-full
-        h-[calc(100svh-128px)]
+        h-100
         overflow-hidden
         flex items-center justify-center
         mt-12 mb-20

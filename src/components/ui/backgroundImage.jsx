@@ -10,7 +10,7 @@ export default function BackgroundImage({
   const whatsappMessage = "Hello Noc Noc! I want to host an event.";
 
   return (
-    <section className="relative w-full min-h-[70dvh] md:min-h-screen">
+    <section className="relative w-full h-100 md:min-h-screen">
 
       {/* Background Image */}
       <div
@@ -23,7 +23,7 @@ export default function BackgroundImage({
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/20"></div>
 
 
         /*
