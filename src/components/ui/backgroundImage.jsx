@@ -10,7 +10,8 @@ export default function BackgroundImage({
   const whatsappMessage = "Hello Noc Noc! I want to host an event.";
 
   return (
-    <section className="relative w-full sm:h-100 h-screen">
+    <section className="relative w-full min-h-[70dvh] md:min-h-screen">
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -20,10 +21,14 @@ export default function BackgroundImage({
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
+
+
+        /*
       {/* Content */}
-      <div className="font-cinzel relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      {/* <div className="font-cinzel relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         {heading && (
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             {heading}
@@ -33,12 +38,12 @@ export default function BackgroundImage({
           <p className="font-alice text-lg md:text-2xl text-[#C29C7D] mb-6 max-w-3xl">
             {subheading}
           </p>
-        )}
+        )} */}
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center">
+        {/* <div className="flex flex-wrap gap-4 justify-center"> */}
           {/* WhatsApp Button */}
-          <button
+          {/* <button
             onClick={() =>
               window.open(
                 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -48,9 +53,9 @@ export default function BackgroundImage({
               )
             }
             className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#25D366] font-semibold uppercase tracking-wide  hover:bg-[#25D366] hover:text-black transition-all duration-300 cursor-pointer"
-          >
+          > */}
             {/* WhatsApp SVG */}
-            <svg
+            {/* <svg
               className="w-5 h-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,15 +69,15 @@ export default function BackgroundImage({
               />
             </svg>
             WhatsApp Us
-          </button>
+          </button> */}
 
           {/* Call Button */}
-          <button
+          {/* <button
             onClick={() => (window.location.href = `tel:${whatsappNumber}`)}
             className="flex items-center gap-2 px-8 py-3 bg-transparent text-white border-2 border-[#C29C7D] font-semibold uppercase tracking-wide  hover:bg-[#C29C7D] hover:text-black transition-all duration-300 cursor-pointer"
-          >
+          > */}
             {/* Call SVG */}
-            <svg
+            {/* <svg
               className="w-5 h-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +93,90 @@ export default function BackgroundImage({
             Call Us
           </button>
         </div>
-      </div>
+      </div> */}
+            
+      
+
+      <div className="font-cinzel relative z-10 flex items-center justify-center h-full px-4">
+  <div
+    className="
+      max-w-3xl w-full
+      text-center
+      bg-black/55 backdrop-blur-sm
+      px-6 py-8 sm:px-10 sm:py-10
+      rounded-xl
+      border border-white/10
+    "
+  >
+    {heading && (
+      <h1
+        className="
+          text-3xl sm:text-4xl md:text-5xl
+          font-bold
+          text-white
+          tracking-wide
+          leading-tight
+        "
+      >
+        {heading}
+      </h1>
+    )}
+
+    {subheading && (
+      <p
+        className="
+          mt-4
+          font-alice
+          text-sm sm:text-base md:text-lg
+          text-[#C29C7D]
+          leading-relaxed
+        "
+      >
+        {subheading}
+      </p>
+    )}
+
+    <div className="mt-6 flex flex-wrap gap-4 justify-center">
+      {/* WhatsApp Button */}
+      <button
+        onClick={() =>
+          window.open(
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              whatsappMessage
+            )}`,
+            "_blank"
+          )
+        }
+        className="
+          flex items-center gap-2
+          px-6 py-3
+          border-2 border-[#25D366]
+          text-white font-semibold uppercase tracking-wide
+          hover:bg-[#25D366] hover:text-black
+          transition-all duration-300
+        "
+      >
+        WhatsApp Us
+      </button>
+
+      {/* Call Button */}
+      <button
+        onClick={() => (window.location.href = `tel:${whatsappNumber}`)}
+        className="
+          flex items-center gap-2
+          px-6 py-3
+          border-2 border-[#C29C7D]
+          text-white font-semibold uppercase tracking-wide
+          hover:bg-[#C29C7D] hover:text-black
+          transition-all duration-300
+        "
+      >
+        Call Us
+      </button>
+    </div>
+  </div>
+</div>
+
     </section>
   );
 }

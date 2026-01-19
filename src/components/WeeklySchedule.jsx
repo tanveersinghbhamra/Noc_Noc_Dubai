@@ -37,7 +37,6 @@ export default function WeeklySchedule() {
         overflow-hidden
         flex items-center justify-center
         mt-12 mb-20
-        will-change-transform
         md:bg-[url('/nocnocImages/weeklyCoverBG2.jpg')]
         bg-cover bg-center bg-no-repeat
         sm:mt-25

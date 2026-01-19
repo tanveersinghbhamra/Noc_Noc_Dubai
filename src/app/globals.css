@@ -192,3 +192,14 @@ html, body {
 body {
   font-family: var(--font-lato);
 }
+
+.contain-layout {
+  contain: layout paint;
+}
+
+html,
+body {
+  height: auto;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+}
