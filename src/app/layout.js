@@ -117,6 +117,10 @@ export default function RootLayout({ children }) {
         className={`${cinzel.variable} ${lato.variable} ${alice.variable} antialiased bg-black`}
       >
         <Navbar />
+        <main
+          id="app-scroll"
+          className="h-full overflow-y-auto overscroll-contain"
+        ></main>
         {children}
         <Toaster position="top-center" reverseOrder={false} />
         <Footer />
