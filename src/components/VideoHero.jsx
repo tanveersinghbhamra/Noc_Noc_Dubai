@@ -1,57 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 export default function VideoHero({ title, subtitle, videoUrl }) {
-  const videoRef = useRef(null);
-  const [isIOS, setIsIOS] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  // Detect platform AFTER mount
-  useEffect(() => {
-    const ua = navigator.userAgent || "";
-    setIsIOS(/iPad|iPhone|iPod/.test(ua));
-    setMounted(true);
-  }, []);
-
-  // iOS: play on first interaction
-  useEffect(() => {
-    if (!mounted || !isIOS) return;
-
-    const video = videoRef.current;
-    if (!video) return;
-
-    const unlock = () => {
-      video.play().catch(() => {});
-      window.removeEventListener("touchstart", unlock);
-      window.removeEventListener("scroll", unlock);
-    };
-
-    window.addEventListener("touchstart", unlock, { passive: true });
-    window.addEventListener("scroll", unlock, { passive: true });
-
-    return () => {
-      window.removeEventListener("touchstart", unlock);
-      window.removeEventListener("scroll", unlock);
-    };
-  }, [mounted, isIOS]);
-
   return (
-    <section className="relative w-full min-h-[600px] md:min-h-[100vh] flex items-center justify-center overflow-hidden text-center">
+    <section className="relative w-full min-h-[100svh] flex items-center justify-center overflow-hidden text-center">
       <video
-        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src={videoUrl}
+        autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        autoPlay={!isIOS}               // Android/Desktop only
-        {...(mounted && isIOS
-          ? { poster: "/nocnocImages/HeroPreview.png" }
-          : {})}
-        controls={false}
-        disablePictureInPicture
       />
 
       <div className="absolute inset-0 bg-black/40" />
