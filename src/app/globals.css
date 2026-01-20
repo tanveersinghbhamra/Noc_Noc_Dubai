@@ -264,19 +264,16 @@ body {
   -webkit-overflow-scrolling: touch;
 } */
 /* global.css */
+
+
+/* Replace your current global CSS with this */
 html, body {
-  /* This prevents the browser from trying to resize the page area */
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
   height: 100%;
 }
 
-#__next, main {
-  /* This creates a new, stable scroll container */
-  /* It uses 'svh' to ensure the bottom of your site isn't cut off */
-  height: 100svh;
-  width: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+body {
+  /* Use svh to prevent the jumpy resize on mobile */
+  min-height: 100svh;
+  overflow-x: hidden;
+  /* Avoid forcing overflow-y: scroll on the body if possible */
 }
