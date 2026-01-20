@@ -40,12 +40,12 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src={videoUrl}
-        poster="/nocnocImages/hero-poster.jpg"
+        poster="/nocnocImages/HeroPreview.png"
         muted
         loop
         playsInline
         preload="auto"
-        autoPlay   // 🔥 KEY LINE
+        autoPlay={!isIOS}   // 🔥 KEY LINE
       />
 
       <div className="absolute inset-0 bg-black/40" />
