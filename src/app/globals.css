@@ -265,25 +265,39 @@ body {
 } */
 /* global.css */
 
-
-
-
-/* global.css */
-
-
-/* global.css */
+/* Add this to global.css */
 html, body {
-  /* Use svh to lock height to the smallest screen area (no jumps) */
+  /* This is the master lock for the jump */
   height: 100svh;
   margin: 0;
   padding: 0;
-  /* Allow natural scrolling so sticky navs work */
   overflow-x: hidden;
-  overflow-y: auto; 
+  overflow-y: auto;
+  background-color: #010101;
 }
 
-body {
-  /* Restores sharp rendering and momentum on iOS */
-  -webkit-overflow-scrolling: touch;
-  position: relative;
+@keyframes butterySettle {
+  0% { 
+    opacity: 0; 
+    /* translate3d uses the GPU; 40px gives it that cinematic travel */
+    transform: translate3d(0, 40px, 0) scale(0.98); 
+  }
+  20% { opacity: 1; }
+  100% { 
+    opacity: 1; 
+    transform: translate3d(0, 0, 0) scale(1); 
+  }
+}
+
+.hero-final-title {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: butterySettle 5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+.hero-final-subtitle {
+  opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: butterySettle 5s cubic-bezier(0.1, 0.9, 0.2, 1) 0.5s forwards;
 }

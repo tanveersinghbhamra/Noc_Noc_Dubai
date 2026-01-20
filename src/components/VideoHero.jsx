@@ -1,91 +1,42 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero({ title, subtitle, videoUrl, imageUrl }) {
-  const [isIPhone, setIsIPhone] = useState(true); // Default to true to show image immediately
-  const [mounted, setMounted] = useState(false);
+  const [device, setDevice] = useState(null);
 
   useEffect(() => {
-    const ua = navigator.userAgent;
-    const ios = /iPhone|iPad|iPod/.test(ua);
-    setIsIPhone(ios);
-    setMounted(true);
+    // Detect device instantly
+    const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    setDevice(isIOS ? "ios" : "other");
   }, []);
 
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden h-[100svh] bg-[#050505]">
+    <section className="relative w-full h-[100svh] flex items-center justify-center text-center overflow-hidden bg-[#010101]">
       
-      {/* --- BACKGROUND LAYER --- */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence initial={false}>
-          {/* Show image immediately for everyone on mount */}
-          {(!mounted || isIPhone) ? (
-            <motion.div
-              key="image-bg"
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0"
-            >
-              <Image src={imageUrl} alt="Noc Noc" fill priority className="object-cover" />
-              <div className="absolute inset-0 bg-black/50" />
-            </motion.div>
-          ) : (
-            /* Switch to video for Android/Desktop only after mounting */
-            <motion.div
-              key="video-bg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5 }}
-              className="absolute inset-0"
-            >
-              <video
-                className="absolute inset-0 w-full h-full object-cover"
-                src={videoUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-              />
-              <div className="absolute inset-0 bg-black/50" />
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* BACKGROUND: Fades in without moving or resizing */}
+      <div 
+        className={`absolute inset-0 z-0 transition-opacity duration-[2500ms] ease-out will-change-opacity ${
+          device ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ transitionDelay: '400ms' }} 
+      >
+        {device === "ios" ? (
+          <Image src={imageUrl} alt="Noc Noc" fill priority fetchPriority="high" className="object-cover" />
+        ) : device === "other" ? (
+          <video className="w-full h-full object-cover" src={videoUrl} autoPlay loop muted playsInline preload="auto" />
+        ) : null}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* --- CONTENT LAYER --- */}
+      {/* TEXT: Starts at 0ms, settles over 5s with GPU power */}
       <div className="relative z-10 px-4 pointer-events-none">
-        <motion.h1
-          initial={{ opacity: 0, y: 15, filter: "blur(8px)" }}
-          animate={{ 
-            opacity: 1, 
-            y: 0, 
-            filter: "blur(0px)",
-            textShadow: ["0 0 0px rgba(194, 156, 125, 0)", "0 0 20px rgba(194, 156, 125, 0.4)", "0 0 0px rgba(194, 156, 125, 0)"] 
-          }}
-          transition={{ 
-            duration: 1.5, 
-            ease: "easeOut",
-            textShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" } // The subtle shimmer
-          }}
-          className="font-cinzel uppercase text-4xl sm:text-5xl md:text-7xl font-bold text-[#C29C7D] mb-4 tracking-wider"
-        >
+        <h1 className="hero-final-title font-cinzel uppercase text-4xl sm:text-5xl md:text-7xl font-bold text-[#C29C7D] mb-4 tracking-tight">
           {title}
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.4 }}
-          className="font-alice text-white text-lg sm:text-2xl md:text-3xl font-light max-w-4xl mx-auto tracking-wide"
-        >
+        </h1>
+        <p className="hero-final-subtitle font-alice text-white text-lg sm:text-2xl md:text-3xl font-light max-w-4xl mx-auto">
           {subtitle}
-        </motion.p>
+        </p>
       </div>
     </section>
   );
