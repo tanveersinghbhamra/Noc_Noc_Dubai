@@ -45,7 +45,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         loop
         playsInline
         preload="auto"
-        autoPlay={!isIOS}   // 🔥 KEY LINE
+        autoPlay   // 🔥 KEY LINE
       />
 
       <div className="absolute inset-0 bg-black/40" />
