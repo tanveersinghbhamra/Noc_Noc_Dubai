@@ -1,57 +1,50 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function VideoHero({ title, subtitle, videoUrl }) {
   const videoRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    
-    const video = videoRef.current;
-    if (!video) return;
-
-    // 1. Attempt immediate play (works on most modern iOS)
-    const attemptPlay = () => {
-      video.play().catch(() => {
-        // 2. If blocked, wait for first interaction
-        const unlock = () => {
-          video.play();
-          window.removeEventListener("touchstart", unlock);
-        };
-        window.addEventListener("touchstart", unlock, { passive: true });
+    // Attempt to play manually as soon as the component mounts
+    // This bypasses many iOS autoplay restrictions
+    if (videoRef.current) {
+      videoRef.current.play().catch((err) => {
+        console.log("Autoplay blocked, waiting for interaction", err);
       });
-    };
-
-    attemptPlay();
+    }
   }, []);
 
   return (
-    <section className="relative w-full min-h-[600px] md:min-h-[100svh] flex items-center justify-center overflow-hidden text-center">
-      <video
+    /* Changed min-h-screen to min-h-[100svh] to match the global fix */
+    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-[100svh]">
+      
+      <motion.video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        muted
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src={videoUrl}
+        autoPlay
         loop
-        playsInline // Absolutely required for iOS
-        autoPlay    // Still keep this as a hint to the browser
+        muted
+        playsInline // CRITICAL: Must be present for iOS
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         preload="auto"
-        controls={false}
-      >
-        <source src={videoUrl} type="video/mp4" />
-      </video>
+      />
 
-      {/* Overlay and Text */}
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative z-10 px-4 text-[#C29C7D]">
-        <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">
-          {title}
-        </h1>
-        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl font-semibold max-w-5xl mx-auto">
-          {subtitle}
-        </p>
-      </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+      <motion.div
+        className="relative z-10 text-[#C29C7D] px-4"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
+        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">{subtitle}</p>
+      </motion.div>
     </section>
   );
 }
