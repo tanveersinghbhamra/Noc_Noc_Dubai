@@ -218,35 +218,34 @@ body {
   position: relative;
 } */
 
-/* 
+
 html {
-  No overflow: hidden here
-  height: -webkit-fill-available; 
-  Fallback for older iOS
+  /* No overflow: hidden here */
+  height: -webkit-fill-available; /* Fallback for older iOS */
 }
 
 body {
-  min-height: 100svh; The "Small Viewport" doesn't change when bars move
+  min-height: 100svh; /* The "Small Viewport" doesn't change when bars move */
   min-height: -webkit-fill-available;
   overflow-x: hidden;
-  overflow-y: auto; Allow natural scrolling
+  overflow-y: auto; /* Allow natural scrolling */
   position: relative;
-} */
+}
 
 
 /* Replace your previous global CSS with this */
-html, body {
+/* html, body { */
   /* Using svh prevents the "snap" when address bars move */
-  height: 100svh;
-  margin: 0;
-  padding: 0;
-}
+  /* height: 100svh; */
+  /* margin: 0; */
+  /* padding: 0; */
+/* } */
 
-body {
+/* body { */
   /* This allows natural momentum scrolling which iPhone videos require */
-  overflow-y: auto; 
-  overflow-x: hidden;
+  /* overflow-y: auto;  */
+  /* overflow-x: hidden; */
   /* Fixes some safari rendering bugs */
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-}
+  /* position: relative; */
+  /* -webkit-font-smoothing: antialiased; */
+/* } */
