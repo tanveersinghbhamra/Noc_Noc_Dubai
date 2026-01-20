@@ -10,25 +10,23 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
     const video = videoRef.current;
     if (!video) return;
 
-    // 1. Attempt immediate play (Works on Android/Desktop)
-    const attemptPlay = () => {
+    // Force play on mount - this fixes the 'blur' by forcing high-res render
+    const startVideo = () => {
       video.play().catch(() => {
-        // 2. Fallback: Wait for user interaction to unlock (iOS Fix)
+        // Fallback: unlock on first touch
         const unlock = () => {
           video.play();
           window.removeEventListener("touchstart", unlock);
-          window.removeEventListener("mousedown", unlock);
         };
-        window.addEventListener("touchstart", unlock, { passive: true });
-        window.addEventListener("mousedown", unlock);
+        window.addEventListener("touchstart", unlock);
       });
     };
 
-    attemptPlay();
+    startVideo();
   }, []);
 
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden h-screen md:h-[100vh]">
+    <section className="relative w-full flex items-center justify-center text-center overflow-hidden h-[100svh]">
       
       <motion.video
         ref={videoRef}
@@ -37,11 +35,14 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         autoPlay
         loop
         muted
-        playsInline // Mandatory for iPhone
+        playsInline
+        preload="auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        preload="auto"
+        transition={{ duration: 0.8 }}
+        // Explicitly set width/height to help Safari render sharply
+        width="100%"
+        height="100%"
       />
 
       {/* Overlay */}
@@ -52,12 +53,12 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         className="relative z-10 text-[#C29C7D] px-4"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 1, delay: 0.2 }}
       >
         <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">
           {title}
         </h1>
-        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">
+        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed max-w-5xl">
           {subtitle}
         </p>
       </motion.div>

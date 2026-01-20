@@ -269,18 +269,21 @@ body {
 
 
 /* global.css */
+
+
+/* global.css */
 html, body {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+  /* Use svh to lock height to the smallest screen area (no jumps) */
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  /* Allow natural scrolling so sticky navs work */
+  overflow-x: hidden;
+  overflow-y: auto; 
 }
 
-/* This is the container that actually scrolls */
-#__next, main {
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch; /* Essential for smooth iOS scroll */
+body {
+  /* Restores sharp rendering and momentum on iOS */
+  -webkit-overflow-scrolling: touch;
+  position: relative;
 }
