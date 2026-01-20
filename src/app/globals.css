@@ -218,19 +218,18 @@ body {
   position: relative;
 } */
 
-
+/* 
 html {
-  /* No overflow: hidden here */
-  height: -webkit-fill-available; /* Fallback for older iOS */
+  height: -webkit-fill-available; 
 }
 
 body {
-  min-height: 100svh; /* The "Small Viewport" doesn't change when bars move */
+  min-height: 100svh; 
   min-height: -webkit-fill-available;
   overflow-x: hidden;
-  overflow-y: auto; /* Allow natural scrolling */
+  overflow-y: auto; 
   position: relative;
-}
+} */
 
 
 /* Replace your previous global CSS with this */
@@ -249,3 +248,21 @@ body {
   /* position: relative; */
   /* -webkit-font-smoothing: antialiased; */
 /* } */
+
+
+/* Update your global.css to this */
+html, body {
+  /* Using svh prevents the "jump" by locking to the smallest viewport area */
+  height: 100svh; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Critical: Must be 'auto' or 'visible' for iOS to allow video autoplay */
+  overflow-y: auto; 
+  overflow-x: hidden;
+  position: relative;
+  /* Helps with smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
