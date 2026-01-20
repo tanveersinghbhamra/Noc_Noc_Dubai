@@ -266,14 +266,21 @@ body {
 /* global.css */
 
 
-/* Replace your current global CSS with this */
+
+
+/* global.css */
 html, body {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
   height: 100%;
 }
 
-body {
-  /* Use svh to prevent the jumpy resize on mobile */
-  min-height: 100svh;
+/* This is the container that actually scrolls */
+#__next, main {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
-  /* Avoid forcing overflow-y: scroll on the body if possible */
+  -webkit-overflow-scrolling: touch; /* Essential for smooth iOS scroll */
 }

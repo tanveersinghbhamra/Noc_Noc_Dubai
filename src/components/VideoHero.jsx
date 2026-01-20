@@ -1,48 +1,65 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function VideoHero({ title, subtitle, videoUrl }) {
-  // Animation variants
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  };
+  const videoRef = useRef(null);
 
-  const videoVariants = {
-    hidden: { opacity: 0, scale: 1.05 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.5 } },
-  };
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // 1. Attempt immediate play (Works on Android/Desktop)
+    const attemptPlay = () => {
+      video.play().catch(() => {
+        // 2. Fallback: Wait for user interaction to unlock (iOS Fix)
+        const unlock = () => {
+          video.play();
+          window.removeEventListener("touchstart", unlock);
+          window.removeEventListener("mousedown", unlock);
+        };
+        window.addEventListener("touchstart", unlock, { passive: true });
+        window.addEventListener("mousedown", unlock);
+      });
+    };
+
+    attemptPlay();
+  }, []);
 
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-screen md:min-h-[100vh]">
+    <section className="relative w-full flex items-center justify-center text-center overflow-hidden h-screen md:h-[100vh]">
       
-      {/* Video Background with delayed fade-in */}
       <motion.video
+        ref={videoRef}
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={videoUrl}
         autoPlay
         loop
         muted
-        initial="hidden"
-        animate="visible"
-        playsInline
-        preload="metadata"
-        // variants={videoVariants}
+        playsInline // Mandatory for iPhone
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        preload="auto"
       />
 
-      {/* Overlay to darken video */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-      {/* Text content with fade-up animation */}
+      {/* Text content */}
       <motion.div
         className="relative z-10 text-[#C29C7D] px-4"
-        initial="hidden"
-        animate="visible"
-        // variants={textVariants}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
       >
-        <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">{title}</h1>
-        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">{subtitle}</p>
+        <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">
+          {title}
+        </h1>
+        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-center max-w-5xl">
+          {subtitle}
+        </p>
       </motion.div>
     </section>
   );
