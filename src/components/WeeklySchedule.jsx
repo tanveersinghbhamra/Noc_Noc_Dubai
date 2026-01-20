@@ -48,7 +48,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         preload="auto"
         autoPlay={!isIOS}               // Android/Desktop only
         {...(mounted && isIOS
-          ? { poster: "/nocnocImages/hero-poster.jpg" }
+          ? { poster: "/nocnocImages/HeroPreview.png" }
           : {})}
         controls={false}
         disablePictureInPicture
