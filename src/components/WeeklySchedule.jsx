@@ -5,16 +5,18 @@ import { useEffect, useRef, useState } from "react";
 export default function VideoHero({ title, subtitle, videoUrl }) {
   const videoRef = useRef(null);
   const [isIOS, setIsIOS] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  // Detect iOS once
+  // Detect platform AFTER mount
   useEffect(() => {
     const ua = navigator.userAgent || "";
     setIsIOS(/iPad|iPhone|iPod/.test(ua));
+    setMounted(true);
   }, []);
 
-  // iOS-only: unlock playback on first interaction
+  // iOS: play on first interaction
   useEffect(() => {
-    if (!isIOS) return;
+    if (!mounted || !isIOS) return;
 
     const video = videoRef.current;
     if (!video) return;
@@ -32,7 +34,7 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
       window.removeEventListener("touchstart", unlock);
       window.removeEventListener("scroll", unlock);
     };
-  }, [isIOS]);
+  }, [mounted, isIOS]);
 
   return (
     <section className="relative w-full min-h-[600px] md:min-h-[100vh] flex items-center justify-center overflow-hidden text-center">
@@ -44,8 +46,10 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         loop
         playsInline
         preload="auto"
-        autoPlay={!isIOS}                     // ✅ Android/Desktop
-        poster={isIOS ? "/nocnocImages/HeroPreview.png" : undefined} // ✅ iOS only
+        autoPlay={!isIOS}               // Android/Desktop only
+        {...(mounted && isIOS
+          ? { poster: "/nocnocImages/hero-poster.jpg" }
+          : {})}
         controls={false}
         disablePictureInPicture
       />
