@@ -46,11 +46,10 @@ export default function VideoHero({ title, subtitle, videoUrl }) {
         loop
         playsInline
         preload="auto"
-        autoPlay
-        // autoPlay={!isIOS}               // Android/Desktop only
-        // {...(mounted && isIOS
-        //   ? { poster: "/nocnocImages/HeroPreview.png" }
-        //   : {})}
+        autoPlay={!isIOS}               // Android/Desktop only
+        {...(mounted && isIOS
+          ? { poster: "/nocnocImages/HeroPreview.png" }
+          : {})}
         controls={false}
         disablePictureInPicture
       />
