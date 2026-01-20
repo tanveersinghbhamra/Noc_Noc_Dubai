@@ -251,18 +251,32 @@ body {
 
 
 /* Update your global.css to this */
-html, body {
-  /* Using svh prevents the "jump" by locking to the smallest viewport area */
+/* html, body {
   height: 100svh; 
   margin: 0;
   padding: 0;
 }
 
 body {
-  /* Critical: Must be 'auto' or 'visible' for iOS to allow video autoplay */
   overflow-y: auto; 
   overflow-x: hidden;
   position: relative;
-  /* Helps with smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+} */
+/* global.css */
+html, body {
+  /* This prevents the browser from trying to resize the page area */
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#__next, main {
+  /* This creates a new, stable scroll container */
+  /* It uses 'svh' to ensure the bottom of your site isn't cut off */
+  height: 100svh;
+  width: 100%;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
