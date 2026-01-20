@@ -1,45 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function VideoHero({ title, subtitle, videoUrl }) {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-  }, []);
+    const unlock = () => {
+      if (!videoRef.current || unlocked) return;
+
+      videoRef.current
+        .play()
+        .then(() => setUnlocked(true))
+        .catch(() => {});
+
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("scroll", unlock);
+    };
+
+    // iOS triggers one of these immediately when user interacts
+    window.addEventListener("touchstart", unlock, { passive: true });
+    window.addEventListener("scroll", unlock, { passive: true });
+
+    return () => {
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("scroll", unlock);
+    };
+  }, [unlocked]);
 
   return (
-    <section className="relative w-full flex items-center justify-center text-center overflow-hidden min-h-[600px] md:min-h-[100vh]">
+    <section className="relative w-full min-h-[600px] md:min-h-[100vh] flex items-center justify-center overflow-hidden text-center">
       <video
         ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         src={videoUrl}
-        autoPlay
-        loop
         muted
+        loop
         playsInline
         preload="auto"
       />
 
       <div className="absolute inset-0 bg-black/40" />
 
-      <motion.div
-        className="relative z-10 text-[#C29C7D] px-4"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
+      <div className="relative z-10 text-[#C29C7D] px-4">
         <h1 className="font-cinzel uppercase text-3xl sm:text-4xl md:text-5xl font-bold">
           {title}
         </h1>
-        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed max-w-5xl">
+        <p className="font-alice text-white text-lg sm:text-2xl md:text-3xl font-semibold max-w-5xl">
           {subtitle}
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 }
