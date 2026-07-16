@@ -28,10 +28,10 @@ export default function Footer() {
             <div className="flex items-center justify-center lg:justify-start gap-2">
               <Phone size={16} className="text-[#C29C7D] shrink-0" />
               <a
-                href="tel:+971506947797"
+                href="tel:+971547063640"
                 className="text-sm text-gray-400 hover:text-[#C29C7D] transition-colors duration-300"
               >
-                +971562717681
+                +971547063640
               </a>
             </div>
           </div>
