@@ -6,7 +6,7 @@ export default function BackgroundImage({
   heading,
   subheading,
 }) {
-  const whatsappNumber = "+971569610965";
+  const whatsappNumber = "+971547063640";
   const whatsappMessage = "Hello Noc Noc! I want to host an event.";
 
   return (

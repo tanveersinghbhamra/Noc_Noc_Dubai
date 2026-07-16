@@ -117,7 +117,7 @@ export default function PrivacyPage() {
             <br />
             Email: <a href="mailto:restaurantnocnoc@gmail.com" className="text-[#C29C7D]">restaurantnocnoc@gmail.com</a>
             <br />
-            Phone: <a href="tel:+971506947797" className="text-[#C29C7D]">+971506947797</a>
+            Phone: <a href="tel:+971547063640" className="text-[#C29C7D]">+971547063640</a>
           </address>
 
           <div className="mt-8">

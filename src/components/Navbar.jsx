@@ -51,7 +51,7 @@ export function Navbar() {
           <div className="flex items-center gap-4 sm:pr-15">
             <NavbarButton variant="custom" onClick={() =>
               window.open(
-                "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot",
+                "https://wa.me/+971547063640?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot",
                 "_blank"
               )
             }>Reserve</NavbarButton>

@@ -27,7 +27,7 @@ export default function FeatureSections() {
       description:
         "Whether it’s an intimate dinner or a high energy night out, Noc Noc’s ambiance adapts to every mood.",
       buttonText: "Book Your Table",
-      link: "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
+      link: "https://wa.me/+971547063640?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
     },
     {
       image: "/nocnocImages/twoLadies.jpeg",
@@ -35,7 +35,7 @@ export default function FeatureSections() {
       description:
         "Celebrate with your squad at Noc Noc’s exclusive Ladies Night where music, fashion, and fun collide.",
       buttonText: "Join the Party",
-      link: "https://wa.me/+971569610965?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
+      link: "https://wa.me/+971547063640?text=Hello%20Noc%20Noc!%20I%20want%20to%20reserve%20a%20slot"
     },
   ];
 
